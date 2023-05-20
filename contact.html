@@ -31,15 +31,9 @@
           <a class="navbar-brand" href="index.html">
             <img src="images/logo.png" alt="" />
           </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav  ">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home </a>
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="about.html"> About Us </a>
@@ -47,8 +41,8 @@
               <li class="nav-item">
                 <a class="nav-link" href="team.html">Our Team </a>
               </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="contact.html">Contact us <span class="sr-only">(current)</span></a>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact us</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="service.html">Our Services </a>
@@ -56,40 +50,77 @@
               <li class="nav-item">
                 <a class="nav-link" href="plan.html"> Plan and Pricing </a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="faq.html"> FAQs </a>
+              </li>
             </ul>
-            <div class="user_option">
-              <a href="">
+            <div style="padding-left: 400px;"></div>
+            <div class="user_option" style="text-align: right;">
+              <a href="login.html">
                 <img src="images/user.png" alt="">
                 <span>
                   Login
                 </span>
               </a>
             </div>
-          </div>
-          <div>
-            <div class="custom_menu-btn ">
-              <button>
-                <span class=" s-1">
-
-                </span>
-                <span class="s-2">
-
-                </span>
-                <span class="s-3">
-
-                </span>
-              </button>
-            </div>
-          </div>
 
         </nav>
       </div>
     </header>
     <!-- end header section -->
   </div>
-
-  <!-- contact section -->
-
+      <div class="container-fluid bg-light my-5 p-0 py-5">
+        <div class="container p-0 py-5">
+            <div class="d-flex flex-column text-center mb-5">
+                <h4 class="text-secondary mb-3">Testimonial</h4>
+                <h1 class="display-4 m-0">Our Client <span class="text-primary">Says</span></h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel">
+                <div class="bg-white mx-3 p-4">
+                    <div class="d-flex align-items-end mb-3 mt-n4 ml-n4">
+                        <img class="img-fluid" src="images/testimonial-3.jpg" style="width: 80px; height: 80px;" alt="">
+                        <div class="ml-3">
+                            <h5>Garry</h5>
+                            <i>Data Analyst</i>
+                        </div>
+                    </div>
+                    <p class="m-0">
+                      I highly recommend the pet day care center for your furry friends. With a friendly and attentive staff, spacious play areas, and top-notch care, your pets will enjoy a safe and stimulating environment. Trustworthy and reliable, this center is the perfect choice for your beloved pets.</p>
+                </div>
+                <div class="bg-white mx-3 p-4">
+                    <div class="d-flex align-items-end mb-3 mt-n4 ml-n4">
+                        <img class="img-fluid" src="images/testimonial-2.jpg" style="width: 80px; height: 80px;" alt="">
+                        <div class="ml-3">
+                            <h5>Pratul</h5>
+                            <i>Graphic Designer</i>
+                        </div>
+                    </div>
+                    <p class="m-0">Look no further for the perfect pet day care center! With experienced staff, engaging play areas, and a focus on safety, your furry companion will have a tail-wagging time. Trustworthy and caring, this center provides exceptional care for your beloved pets. A pawsome choice indeed!</p>
+                </div>
+                <div class="bg-white mx-3 p-4">
+                    <div class="d-flex align-items-end mb-3 mt-n4 ml-n4">
+                        <img class="img-fluid" src="images/testimonial-3.jpg" style="width: 80px; height: 80px;" alt="">
+                        <div class="ml-3">
+                            <h5>Zeeshan</h5>
+                            <i>Registered Nurse</i>
+                        </div>
+                    </div>
+                    <p class="m-0">I highly recommend this pet day care center. Their dedicated staff ensures a fun, safe, and nurturing environment for your furry friends. With spacious play areas, stimulating activities, and personalized attention, your pets will receive top-notch care. Trust them to keep your beloved companions happy and entertained.</p>
+                </div>
+                <div class="bg-white mx-3 p-4">
+                    <div class="d-flex align-items-end mb-3 mt-n4 ml-n4">
+                        <img class="img-fluid" src="images/testimonial-4.jpg" style="width: 80px; height: 80px;" alt="">
+                        <div class="ml-3">
+                            <h5>Emily</h5>
+                            <i>Social Media Manager</i>
+                        </div>
+                    </div>
+                    <p class="m-0">I highly recommend this pet day care center. Their compassionate and experienced staff provides a loving and stimulating environment for your furry companions. With spacious play areas, interactive activities, and a focus on safety, your pets will receive exceptional care and have a tail-wagging time. Trust them with your beloved pets!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  
   <section class="contact_section layout_padding">
     <div class="container ">
       <div class="heading_container">
@@ -138,8 +169,18 @@
 
   <!-- end contact section -->
 
-
-
+  <!-- footer section -->
+  <section class="container-fluid footer_section ">
+    <div class="container">
+      <p>
+        <a class="text-body" href="privacy.html">Privacy Policy</a>
+        <span class="mx-1">|</span>
+        <a class="text-body" href="">Site Map</a>
+      </p>
+    </div>
+  </section>
+  <!-- end  footer section -->
+  
   <!-- info section -->
   <section class="info_section layout_padding2">
     <div class="container">

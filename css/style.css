@@ -168,7 +168,6 @@ a:focus {
 }
 
 .custom_nav-container .nav_search-btn {
-  background-image: url(../images/search-icon.png);
   background-size: 17px;
   background-repeat: no-repeat;
   background-position-y: 7px;
@@ -1297,7 +1296,7 @@ a:focus {
 }
 
 .sidebar .navbar .nav-item.active .nav-link, .custom_nav-container.navbar-expand-lg .navbar-nav .nav-item:hover .nav-link {
-  color: white;
+  color:aqua;
 }
 
 
