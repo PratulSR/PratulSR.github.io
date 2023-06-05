@@ -34,25 +34,27 @@
 
 <body class="sub_page">
   <div class="hero_area">
+
     <!-- header section strats -->
     <header class="header_section">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container">
           <a class="navbar-brand" href="">
+
             <img src="images/logo.png" alt="" />
           </a>
             <ul class="navbar-nav  ">
-              <li class="nav-item active">
-                <a class="nav-link" href="after_index.html">Home <span class="sr-only">(current)</span></a>
-              </li>
               <li class="nav-item">
-                <a class="nav-link" href="after_about.html"> About Us </a>
+                <a class="nav-link" href="after_index.html">Home </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="after_about.html"> About Us <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="after_team.html">Our Team </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="after_contact.html">Contact us</a>
+                <a class="nav-link" href="after_contact.html">Contact us </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="after_service.html">Our Services </a>
@@ -64,10 +66,10 @@
                 <a class="nav-link" href="after_faq..html"> FAQs </a>
               </li>
             </ul>
-            <div style="padding-left: 350px;"></div>
+            <div style="padding-left: 150px;"></div>
             <div class="user_option">
               <a href="admin.html">
-                <img class="rounded-circle" src="images/Katrina.jpeg" alt="">
+                <img class="rounded-circle" src="images/Katrina.png" alt="">
                 <span>
                   Katrina Kong
                 </span>
@@ -125,6 +127,45 @@
   </div>
   <!-- About End -->
 
+  <!-- ScreenPlay start -->
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <img src="images/Daycare1.jpeg" style="height:580; width:1160px;">
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="images/Daycare2.jpeg" style="height:580; width:1160px;">
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="images/Daycare3.jpeg" style="height:580; width:1160px;">
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="images/Daycare4.jpeg" style="height:580; width:1160px;">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="images/Daycare5.jpeg" style="height:580; width:1160px;">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="images/Daycare6.jpeg" style="height:580; width:1160px;">
+    </div>
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span>
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span>
+       
+    </div>
+    <!-- ScreenPlay start -->
 
     <!-- Team Start -->
     <div class="container-fluid py-5">
@@ -174,7 +215,7 @@
               </div>
               <div class="team-item">
                   <div class="position-relative overflow-hidden">
-                      <img class="img-fluid w-100" src="images/Lihai.png" alt="">
+                      <img class="img-fluid w-100" src="images/Lihai.jpg" alt="">
                   </div>
                   <div class="bg-light text-center p-4">
                       <h5 class="text-uppercase">Lihai Geng</h5>
@@ -202,7 +243,7 @@
     <div class="container">
       <div class="info_logo">
         <h2>
-          DogsHaven
+          Dogs Haven
         </h2>
       </div>
       <div class="row">
@@ -277,9 +318,9 @@
   <section class="container-fluid footer_section ">
     <div class="container">
       <p>
-        <a class="text-body" href="privacy.html">Privacy Policy</a>
+        <a class="text-body" href="after_privacy.html">Privacy Policy</a>
         <span class="mx-1">|</span>
-        <a class="text-body" href="">Site Map</a>
+        <a class="text-body" href="after_sitemap.html">Site Map</a>
       </p>
     </div>
   </section>
@@ -326,6 +367,27 @@
       document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
     });
   </script>
+  <script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+    </script>
   <script>
     $('.carousel').on('slid.bs.carousel', function () {
       $(".indicator-2 li").removeClass("active");

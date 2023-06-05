@@ -40,48 +40,49 @@
 
 <body class="sub_page">
   <div class="hero_area">
+    
     <!-- header section strats -->
     <header class="header_section">
-        <div class="container-fluid">
-          <nav class="navbar navbar-expand-lg custom_nav-container">
-            <a class="navbar-brand" href="index.html">
-              <img src="images/logo.png" alt="" />
-            </a>
-              <ul class="navbar-nav  ">
-                <li class="nav-item active">
-                  <a class="nav-link" href="after_index.html">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="after_about.html"> About Us </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="after_team.html">Our Team </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="after_contact.html">Contact us</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="after_service.html">Our Services </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="after_plan.html"> Plan and Pricing </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="after_faq..html"> FAQs </a>
-                </li>
-              </ul>
-              <div style="padding-left: 350px;"></div>
-              <div class="user_option">
-                <a href="">
-                  <img class="rounded-circle" src="images/Katrina.jpeg" alt="">
-                  <span>
-                    Katrina Kong
-                  </span>
-                </a>
-              </div>
-          </nav>
-        </div>
-      </header>
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="after_index.html">
+            <img src="images/logo.png" alt="" />
+          </a>
+            <ul class="navbar-nav  ">
+              <li class="nav-item">
+                <a class="nav-link" href="after_index.html">Home </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="after_about.html"> About Us </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="after_team.html">Our Team </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="after_contact.html">Contact us </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="after_service.html">Our Services </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="after_plan.html"> Plan and Pricing </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="after_faq..html"> FAQs </a>
+              </li>
+            </ul>
+            <div style="padding-left: 150px;"></div>
+            <div class="user_option">
+              <a href="admin.html">
+                <img class="rounded-circle" src="images/Katrina.png" alt="">
+                <span>
+                  Katrina Kong
+                </span>
+              </a>
+            </div>
+        </nav>
+      </div>
+    </header>
     <!-- end header section -->
     
   </div>
@@ -96,28 +97,35 @@
                         
                         <div class="form-group" >
                             <div class="date" id="date" data-target-input="nearest">
-                                <input type="text" class="form-control border-0 p-4 datetimepicker-input" placeholder="Reservation Date" data-target="#date" data-toggle="datetimepicker"/>
+                                <input required type="text" class="form-control border-0 p-4 datetimepicker-input" placeholder="Reservation Date" data-target="#date" data-toggle="datetimepicker"/>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="time" id="time" data-target-input="nearest">
-                                <input type="text" class="form-control border-0 p-4 datetimepicker-input" placeholder="Reservation Time" data-target="#time" data-toggle="datetimepicker"/>
+                                <input required type="text" class="form-control border-0 p-4 datetimepicker-input" placeholder="Reservation Time" data-target="#time" data-toggle="datetimepicker"/>
                             </div>
                         </div>
                         <div class="form-group">
-                            <select class="custom-select border-0 px-4" style="height: 47px;">
-                                <option selected>Staff Preference</option>
-                                <option value="1">Staff 1</option>
-                                <option value="2">Staff 1</option>
-                                <option value="3">Staff 1</option>
+                            <select required class="custom-select border-0 px-4" style="height: 47px;">
+                                <option selected>Choose Trainer</option>
+                                <option value="1">Any</option>
+                                <option value="2">Pratul</option>
+                                <option value="3">Zeeshan</option>
+                                <option value="4">Emily</option>
+                                <option value="5">Xinyu</option>
+                                <option value="6">Lihai</option>
+                                <option value="7">Qixiang</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <select class="custom-select border-0 px-4" style="height: 47px;">
+                            <select required class="custom-select border-0 px-4" style="height: 47px;">
                                 <option selected>Select A Service</option>
-                                <option value="1">Service 1</option>
-                                <option value="2">Service 1</option>
-                                <option value="3">Service 1</option>
+                                <option value="1">Dog Boarding</option>
+                                <option value="2">Dog Feeding</option>
+                                <option value="3">Dog Grooming</option>
+                                <option value="1">Dog Training</option>
+                                <option value="2">Dog Treatment</option>
+                                <option value="3">Dog Exercise</option>
                             </select>
                         </div>
                         <div>
@@ -127,44 +135,44 @@
                 </div>
             </div>
             <div class="col-lg-7 py-5 py-lg-0 px-3 px-lg-5">
-                <h4 class="text-secondary mb-3">Going for a vacation?</h4>
+                <!-- <h4 class="text-secondary mb-3">Going for a vacation?</h4> -->
                 <h1 class="display-4 mb-4">Book For <span class="text-primary">Your Pet</span></h1>
-                <p>Labore vero lorem eos sed aliquy ipsum aliquy sed. Vero dolore dolore takima ipsum lorem rebum</p>
+                <p>Booking a service for your dog has never been easier!</p>
                 <div class="row py-2">
                     <div class="col-sm-6">
                         <div class="d-flex flex-column">
                             <div class="d-flex align-items-center mb-2">
                                 <h1 class="flaticon-house font-weight-normal text-secondary m-0 mr-3"></h1>
-                                <h5 class="text-truncate m-0">Pet Boarding</h5>
+                                <h5 class="text-truncate m-0">Dog Boarding</h5>
                             </div>
-                            <p>Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet</p>
+                            <p>A Safe and Engaging Retreat for Your Pup's Daycare Needs</p>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="d-flex flex-column">
                             <div class="d-flex align-items-center mb-2">
                                 <h1 class="flaticon-food font-weight-normal text-secondary m-0 mr-3"></h1>
-                                <h5 class="text-truncate m-0">Pet Feeding</h5>
+                                <h5 class="text-truncate m-0">Dog Feeding</h5>
                             </div>
-                            <p>Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet</p>
+                            <p>Wholesome & Nutritious Meals for a Happy, Healthy Dog</p>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="d-flex flex-column">
                             <div class="d-flex align-items-center mb-2">
                                 <h1 class="flaticon-grooming font-weight-normal text-secondary m-0 mr-3"></h1>
-                                <h5 class="text-truncate m-0">Pet Grooming</h5>
+                                <h5 class="text-truncate m-0">Dog Grooming</h5>
                             </div>
-                            <p class="m-0">Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet</p>
+                            <p class="m-0">Pamper Your Pup with Expert Grooming and Styling Services</p>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="d-flex flex-column">
                             <div class="d-flex align-items-center mb-2">
                                 <h1 class="flaticon-toy font-weight-normal text-secondary m-0 mr-3"></h1>
-                                <h5 class="text-truncate m-0">Pet Tranning</h5>
+                                <h5 class="text-truncate m-0">Dog Training</h5>
                             </div>
-                            <p class="m-0">Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet</p>
+                            <p class="m-0">Unlock Your Dog's Full Potential with Professional Training and Behavior Guidance</p>
                         </div>
                     </div>
                 </div>
@@ -179,7 +187,7 @@
     <div class="container">
       <div class="info_logo">
         <h2>
-          DogsHaven
+          Dogs Haven
         </h2>
       </div>
       <div class="row">
@@ -254,9 +262,9 @@
   <section class="container-fluid footer_section ">
     <div class="container">
       <p>
-        <a class="text-body" href="privacy.html">Privacy Policy</a>
+        <a class="text-body" href="after_privacy.html">Privacy Policy</a>
         <span class="mx-1">|</span>
-        <a class="text-body" href="">Site Map</a>
+        <a class="text-body" href="after_sitemap.html">Site Map</a>
       </p>
     </div>
   </section>
