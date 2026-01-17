@@ -16,7 +16,7 @@ export default function ProfileHeader() {
                                     {profileData.name.charAt(0)}
                                 </span>
                             </div>
-                            <p className="text-xs text-[#6B6B6B]">Add headshot</p>
+                            <p className="text-xs text-[#6B6B6B]"></p>
                         </div>
                     </div>
                     {

@@ -9,7 +9,7 @@
         "count": 127,
         "source": "Based on LinkedIn endorsements & peer reviews"
     },
-    "photo": "/images/headshot.jpg",
+    "photo": "/images/headshot.png",
     "bio": {
         "short": "Founding Engineer and Software Professional (First Class Honours, USYD) who bridges the gap between complex backend logic and user-centric product delivery.",
         "full": "I am a Founding Engineer and Software Professional (First Class Honours, USYD) who bridges the gap between complex backend logic and user-centric product delivery. Currently, I am the Product Lead for Done. Life, an AI-first productivity platform, where I own the full lifecycle from architectural design to App Store deployment.\n\nMy technical foundation is built on shipping production-grade infrastructure—from acting as a 'force multiplier' at Accenture (automating security provisioning by 80%) to architecting novel AI pipelines that convert unstructured data into structured calendar events.\n\nBeyond code, I possess a distinct leadership profile as the former President of the USYD Robotics Club, where I scaled the organisation to 1,800+ members. I excel at translating vague requirements into shipped software, whether navigating ambiguous client needs or defining 'Zero-to-One' product roadmaps."
