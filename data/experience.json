@@ -1,0 +1,129 @@
+{
+    "experience": [
+        {
+            "id": "done-life",
+            "company": "Done. Life",
+            "role": "Founding Engineer & Product Lead",
+            "type": "Founding Role",
+            "startDate": "Dec 2024",
+            "endDate": "Present",
+            "current": true,
+            "location": "Sydney, Australia",
+            "description": "AI-first productivity platform automating 'Life Admin' workflows",
+            "highlights": [
+                "Architected a serverless, event-driven backend to automate complex 'Life Admin' workflows for consumers",
+                "Engineered a custom traffic router that dynamically directs payloads between low-latency text models and high-compute vision models, reducing processing overhead by ~40% and response times by ~70%",
+                "Solved temporal hallucination issues in LLMs by injecting dynamic context anchors and Chain-of-Thought protocols",
+                "Led the end-to-end product lifecycle from Zero-to-One, managing full stack & navigating App Store compliance"
+            ],
+            "techStack": [
+                "AWS Lambda",
+                "OpenAI API",
+                "Make.com",
+                "Adalo",
+                "DynamoDB"
+            ],
+            "projects": [
+                "done-life"
+            ]
+        },
+        {
+            "id": "accenture",
+            "company": "Accenture",
+            "role": "Software Engineer",
+            "type": "Full-time",
+            "startDate": "Jun 2024",
+            "endDate": "Dec 2024",
+            "current": false,
+            "location": "Sydney, Australia",
+            "description": "Central Monitoring Team - Serverless infrastructure & automation",
+            "highlights": [
+                "Designed and deployed a serverless API platform on AWS to manage large-scale OpenSearch permissions",
+                "Built event-driven workflows with EventBridge + Step Functions, mirroring stream-processing systems",
+                "Automated infrastructure provisioning with CloudFormation (IaC), reducing manual setup by 80%",
+                "Delivered features in a fully agile scrum team, contributing to sprint planning, reviews, and retrospectives"
+            ],
+            "techStack": [
+                "AWS",
+                "Lambda",
+                "EventBridge",
+                "Step Functions",
+                "CloudFormation",
+                "OpenSearch"
+            ],
+            "projects": [
+                "accenture-permissions"
+            ]
+        },
+        {
+            "id": "usyd-academic",
+            "company": "University of Sydney",
+            "role": "Casual Academic",
+            "type": "Part-time",
+            "startDate": "Feb 2024",
+            "endDate": "Present",
+            "current": true,
+            "location": "Sydney, Australia",
+            "description": "Teaching machine learning and Python to engineering students",
+            "highlights": [
+                "Tutored 335+ students in machine learning and Python workflows for practical engineering use cases",
+                "Mentored students in applying AI/ML to real-world engineering datasets",
+                "Received 95% positive feedback from students"
+            ],
+            "techStack": [
+                "Python",
+                "Pandas",
+                "NumPy",
+                "Scikit-learn"
+            ],
+            "projects": []
+        },
+        {
+            "id": "usyd-robotics",
+            "company": "USYD Robotics Club",
+            "role": "President",
+            "type": "Leadership",
+            "startDate": "Aug 2023",
+            "endDate": "Aug 2025",
+            "current": false,
+            "location": "Sydney, Australia",
+            "description": "Led Australia's largest university robotics club",
+            "highlights": [
+                "Directed a 25-member engineering team delivering 30+ events",
+                "Scaled operations from 230 to 1,800+ members in 2 years",
+                "Delivered cross-disciplinary workshops on programming, computer vision, and embedded systems",
+                "Secured 10+ industry partners and acted as key liaison between technical teams and stakeholders"
+            ],
+            "techStack": [
+                "Python",
+                "Arduino",
+                "ROS",
+                "Computer Vision"
+            ],
+            "projects": [
+                "robotics-club"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "institution": "University of Sydney",
+            "degree": "Bachelor of Engineering Honours",
+            "field": "Software Engineering",
+            "startDate": "Aug 2021",
+            "endDate": "Jul 2025",
+            "honours": "First Class Honours",
+            "wam": 76.8,
+            "honoursWam": 79.2,
+            "highlights": [
+                "Cloud Computing: 88 (High Distinction)",
+                "Full Stack Development: 86 (High Distinction)",
+                "Scalable Data Management: 77 (Distinction)"
+            ],
+            "awards": [
+                "Sydney International Student Award",
+                "Engineering Sydney Industry Placement Scholarship"
+            ]
+        }
+    ]
+}

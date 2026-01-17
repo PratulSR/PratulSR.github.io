@@ -1,0 +1,96 @@
+{
+    "name": "Pratul Singh Raghava",
+    "title": "Software Engineer",
+    "tagline": "Cloud & AI Systems",
+    "location": "Sydney, Australia",
+    "status": "Open to opportunities",
+    "rating": {
+        "score": 4.9,
+        "count": 127,
+        "source": "Based on LinkedIn endorsements & peer reviews"
+    },
+    "photo": "/images/headshot.jpg",
+    "bio": {
+        "short": "Founding Engineer and Software Professional (First Class Honours, USYD) who bridges the gap between complex backend logic and user-centric product delivery.",
+        "full": "I am a Founding Engineer and Software Professional (First Class Honours, USYD) who bridges the gap between complex backend logic and user-centric product delivery. Currently, I am the Product Lead for Done. Life, an AI-first productivity platform, where I own the full lifecycle from architectural design to App Store deployment.\n\nMy technical foundation is built on shipping production-grade infrastructure—from acting as a 'force multiplier' at Accenture (automating security provisioning by 80%) to architecting novel AI pipelines that convert unstructured data into structured calendar events.\n\nBeyond code, I possess a distinct leadership profile as the former President of the USYD Robotics Club, where I scaled the organisation to 1,800+ members. I excel at translating vague requirements into shipped software, whether navigating ambiguous client needs or defining 'Zero-to-One' product roadmaps."
+    },
+    "coreThemes": [
+        {
+            "title": "Build-Run-Own Mindset",
+            "description": "I don't just write code; I architect the solution, manage the cloud operations, and handle the compliance (from GDPR to App Store verification)."
+        },
+        {
+            "title": "AI & Scalability",
+            "description": "I build systems that handle complexity—from scaling database permissions at Accenture to designing 'Split-Path' AI engines that optimize cost and latency."
+        },
+        {
+            "title": "Clarity",
+            "description": "I excel at translating technical trade-offs for non-technical stakeholders (clients, students, leadership)."
+        }
+    ],
+    "trivia": [
+        {
+            "fact": "Can name every country in the world in under 10 minutes",
+            "icon": "🌍",
+            "category": "Skills"
+        },
+        {
+            "fact": "Watches every F1 race religiously",
+            "icon": "🏎️",
+            "category": "Hobbies"
+        },
+        {
+            "fact": "Has FlightRadar24 permanently open for planespotting",
+            "icon": "✈️",
+            "category": "Hobbies"
+        },
+        {
+            "fact": "Plays chess (rating is... a work in progress)",
+            "icon": "♟️",
+            "category": "Hobbies"
+        },
+        {
+            "fact": "Lives on Reddit",
+            "icon": "📱",
+            "category": "Lifestyle"
+        },
+        {
+            "fact": "Scaled USYD Robotics Club from 230 to 1,800+ members",
+            "icon": "🤖",
+            "category": "Achievement"
+        },
+        {
+            "fact": "Once accidentally brought down a database at Accenture, then turned it into a security win",
+            "icon": "💥",
+            "category": "War Stories"
+        },
+        {
+            "fact": "Managed a crisis when 1,100 people signed up for a 60-person event",
+            "icon": "🎪",
+            "category": "War Stories"
+        }
+    ],
+    "personalDetails": {
+        "born": "India",
+        "basedIn": "Sydney, Australia",
+        "education": "University of Sydney",
+        "degree": "B.Eng (Hons) Software Engineering",
+        "honours": "First Class Honours",
+        "gradYear": 2025,
+        "languages": [
+            "English",
+            "Hindi"
+        ]
+    },
+    "social": {
+        "email": "pratulsr26@gmail.com",
+        "phone": "+61 481602870",
+        "linkedin": "https://www.linkedin.com/in/pratulsinghraghava/",
+        "github": "https://github.com/PratulSR"
+    },
+    "awards": [
+        "Sydney International Student Award",
+        "Engineering Sydney Industry Placement Scholarship",
+        "First Class Honours (79.2 Honours WAM)"
+    ]
+}

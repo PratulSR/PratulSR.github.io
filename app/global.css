@@ -1,0 +1,361 @@
+/* Google Fonts Import - Must be first */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Roboto+Mono:wght@400;500&display=swap');
+
+@import "tailwindcss";
+
+/* ============================================
+   PRDb Design System - IMDb-Inspired Portfolio
+   ============================================ */
+
+/* ============================================
+   Design Tokens
+   ============================================ */
+:root {
+  /* Brand Colors */
+  --prdb-gold: #F5C518;
+  --prdb-gold-hover: #E8B708;
+  --prdb-gold-dim: rgba(245, 197, 24, 0.1);
+
+  /* Backgrounds */
+  --bg-primary: #121212;
+  --bg-secondary: #1A1A1A;
+  --bg-tertiary: #1F1F1F;
+  --bg-card: #1C1C1C;
+  --bg-card-hover: #252525;
+
+  /* Text */
+  --text-primary: #FFFFFF;
+  --text-secondary: #AAAAAA;
+  --text-muted: #6B6B6B;
+  --text-link: #5799EF;
+  --text-link-hover: #7DB3FF;
+
+  /* Borders */
+  --border-default: #2A2A2A;
+  --border-hover: #3A3A3A;
+
+  /* Status */
+  --status-available: #46D369;
+  --status-busy: #E87C03;
+
+  /* Ratings */
+  --star-filled: #F5C518;
+  --star-empty: #3A3A3A;
+
+  /* Typography */
+  --font-primary: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Roboto Mono', ui-monospace, monospace;
+
+  /* Spacing */
+  --container-max: 1280px;
+  --container-padding: 1rem;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+}
+
+/* ============================================
+   Base Styles
+   ============================================ */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   Tailwind Utilities - PRDb Components
+   ============================================ */
+
+/* Container */
+@utility container-prdb {
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+/* Cards */
+@utility card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-default);
+  border-radius: 0.5rem;
+  transition: all var(--transition-normal);
+
+  &:hover {
+    background-color: var(--bg-card-hover);
+    border-color: var(--border-hover);
+  }
+}
+
+@utility card-flat {
+  background-color: var(--bg-secondary);
+  border-radius: 0.25rem;
+}
+
+/* Gold Accent Button */
+@utility btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  background-color: var(--prdb-gold);
+  color: #000000;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 0.25rem;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--prdb-gold-hover);
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+/* Ghost Button */
+@utility btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 0.875rem;
+  border: 1px solid var(--border-default);
+  border-radius: 0.25rem;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--bg-tertiary);
+    border-color: var(--border-hover);
+  }
+}
+
+/* Section Headers */
+@utility section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-default);
+}
+
+/* Star Rating */
+@utility star-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.125rem;
+  color: var(--star-filled);
+}
+
+/* Status Badge */
+@utility status-available {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.75rem;
+  background-color: rgba(70, 211, 105, 0.1);
+  color: var(--status-available);
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  border: 1px solid rgba(70, 211, 105, 0.2);
+
+  &::before {
+    content: '';
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--status-available);
+    border-radius: 50%;
+    animation: pulse-dot 2s infinite;
+  }
+}
+
+/* IMDb-style gold badge */
+@utility badge-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.125rem 0.5rem;
+  background-color: var(--prdb-gold);
+  color: #000000;
+  font-size: 0.625rem;
+  font-weight: 700;
+  border-radius: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Tag/Genre Badge */
+@utility tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.625rem;
+  background-color: var(--bg-tertiary);
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  border-radius: 0.25rem;
+  border: 1px solid var(--border-default);
+  transition: all var(--transition-fast);
+
+  &:hover {
+    color: var(--text-primary);
+    border-color: var(--prdb-gold);
+  }
+}
+
+/* Project Poster Card */
+@utility poster-card {
+  position: relative;
+  aspect-ratio: 2/3;
+  background-color: var(--bg-tertiary);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* Link Styling */
+@utility link {
+  color: var(--text-link);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+
+  &:hover {
+    color: var(--text-link-hover);
+    text-decoration: underline;
+  }
+}
+
+/* Text Utilities */
+@utility text-gold {
+  color: var(--prdb-gold);
+}
+
+@utility text-muted {
+  color: var(--text-muted);
+}
+
+@utility text-secondary {
+  color: var(--text-secondary);
+}
+
+/* ============================================
+   Animations
+   ============================================ */
+@keyframes pulse-dot {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* ============================================
+   Scrollbar Styling
+   ============================================ */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-default);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-hover);
+}
+
+/* ============================================
+   Selection Styling
+   ============================================ */
+::selection {
+  background-color: var(--prdb-gold);
+  color: #000000;
+}
+
+/* ============================================
+   Focus Styling (Accessibility)
+   ============================================ */
+:focus-visible {
+  outline: 2px solid var(--prdb-gold);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   X-Ray Mode (Easter Egg - Kept from v1)
+   ============================================ */
+.x-ray-mode {
+  --bg-primary: #001a33;
+  --bg-secondary: #002244;
+  --text-primary: #66b3ff;
+  --prdb-gold: #00aaff;
+}
+
+.x-ray-mode body {
+  background-image:
+    linear-gradient(to right, rgba(102, 179, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(102, 179, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}

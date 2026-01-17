@@ -1,0 +1,371 @@
+{
+    "projects": [
+        {
+            "slug": "done-life",
+            "title": "Done. Life",
+            "tagline": "AI Productivity Platform",
+            "year": 2024,
+            "featured": true,
+            "poster": "/images/projects/done-life.jpg",
+            "synopsis": "An AI-first platform that automates 'Life Admin' by converting unstructured emails, PDFs, and images into structured calendar events. Built from zero-to-one as a solo founder.",
+            "genre": [
+                "AI/ML",
+                "Mobile",
+                "Serverless"
+            ],
+            "techStack": [
+                {
+                    "name": "OpenAI GPT-4o",
+                    "role": "AI Engine"
+                },
+                {
+                    "name": "OpenAI Vision",
+                    "role": "Image Processing"
+                },
+                {
+                    "name": "AWS Lambda",
+                    "role": "Serverless Compute"
+                },
+                {
+                    "name": "DynamoDB",
+                    "role": "Database"
+                },
+                {
+                    "name": "Make.com",
+                    "role": "Workflow Orchestration"
+                },
+                {
+                    "name": "Adalo",
+                    "role": "Mobile Frontend"
+                },
+                {
+                    "name": "IAPHUB",
+                    "role": "In-App Purchases"
+                }
+            ],
+            "ratings": {
+                "complexity": "Principal",
+                "coffee": 5,
+                "documentation": 4,
+                "wouldBuildAgain": "Absolutely",
+                "duration": "8 weeks (Zero-to-One)"
+            },
+            "metrics": [
+                {
+                    "label": "Processing Error Reduction",
+                    "value": "~40%"
+                },
+                {
+                    "label": "Non-actionable Attachment Filtering",
+                    "value": "90%"
+                },
+                {
+                    "label": "Time to App Store",
+                    "value": "8 weeks"
+                }
+            ],
+            "caseStudy": {
+                "challenge": "Users drown in 'Life Admin'—bills, appointments, event invites buried in emails. Manually copying dates to calendars is tedious and error-prone. The AI challenge: LLMs frequently 'hallucinated' dates, calculating relative dates from their training data cut-off instead of the current date.",
+                "solution": "Engineered a 'Context Anchor' injection system that dynamically injects the current ISO timestamp and day of week at inference time. Built a 'Split-Path Engine' to route traffic between low-latency text models and high-compute vision models based on payload analysis. Implemented aggressive 'Junk Filters' to discard non-actionable attachments (<5KB signatures/icons).",
+                "impact": "Completely solved the temporal hallucination issue. The 'Forward-to-Email' feature became the app's most-used ingress method. Reduced API costs by filtering 90% of junk attachments. Successfully launched on App Store within 8-week timeline."
+            },
+            "links": {
+                "live": null,
+                "github": null,
+                "appStore": null
+            },
+            "screenshots": []
+        },
+        {
+            "slug": "accenture-permissions",
+            "title": "Serverless Permissions Platform",
+            "tagline": "Enterprise Security Automation",
+            "year": 2024,
+            "featured": true,
+            "poster": "/images/projects/accenture.jpg",
+            "synopsis": "Automated the manual, error-prone process of updating user permissions in OpenSearch. Transformed a ticket-based workflow into a fully automated, auditable self-service API.",
+            "genre": [
+                "Cloud",
+                "Enterprise",
+                "Security"
+            ],
+            "techStack": [
+                {
+                    "name": "AWS API Gateway",
+                    "role": "API Layer"
+                },
+                {
+                    "name": "AWS EventBridge",
+                    "role": "Event Routing"
+                },
+                {
+                    "name": "AWS Lambda",
+                    "role": "Compute"
+                },
+                {
+                    "name": "AWS Step Functions",
+                    "role": "Orchestration"
+                },
+                {
+                    "name": "OpenSearch",
+                    "role": "Target System"
+                },
+                {
+                    "name": "CloudFormation",
+                    "role": "Infrastructure as Code"
+                }
+            ],
+            "ratings": {
+                "complexity": "Senior",
+                "coffee": 3,
+                "documentation": 5,
+                "wouldBuildAgain": "Yes",
+                "duration": "6 months"
+            },
+            "metrics": [
+                {
+                    "label": "Manual Effort Reduction",
+                    "value": "80%"
+                },
+                {
+                    "label": "Daily Tickets Automated",
+                    "value": "~10/day"
+                },
+                {
+                    "label": "Update Latency",
+                    "value": "Near-instant"
+                }
+            ],
+            "caseStudy": {
+                "challenge": "The team manually processed ~10 tickets/day for user permissions in OpenSearch. The process was slow, error-prone, and created bottlenecks. Security misconfigurations could go unnoticed.",
+                "solution": "Architected an EventBridge Pipe → Step Function workflow. Created CloudFormation templates for repeatable deployments. Built state machine logic to handle Add/Modify/Delete operations with full audit logging. Wrote comprehensive runbooks for operations.",
+                "impact": "80% reduction in manual work. Latency dropped from hours to near-instantaneous. Discovered and patched a security misconfiguration that also existed in Production—turned a deployment mistake into a security hardening win."
+            },
+            "links": {
+                "live": null,
+                "github": null
+            },
+            "screenshots": []
+        },
+        {
+            "slug": "scholar-score",
+            "title": "Scholar Score",
+            "tagline": "University Review Platform",
+            "year": 2023,
+            "featured": true,
+            "poster": "/images/projects/scholar-score.jpg",
+            "synopsis": "A Django web platform for university course reviews with sentiment analysis. Features secure university-email authentication, AJAX-driven infinite scroll, and dynamic sentiment coloring using NLP.",
+            "genre": [
+                "Full-Stack",
+                "NLP",
+                "EdTech"
+            ],
+            "techStack": [
+                {
+                    "name": "Django",
+                    "role": "Backend Framework"
+                },
+                {
+                    "name": "PostgreSQL",
+                    "role": "Database"
+                },
+                {
+                    "name": "Gmail API",
+                    "role": "Authentication"
+                },
+                {
+                    "name": "Google Cloud NLP",
+                    "role": "Sentiment Analysis"
+                },
+                {
+                    "name": "JavaScript",
+                    "role": "Frontend Interactivity"
+                }
+            ],
+            "ratings": {
+                "complexity": "Mid",
+                "coffee": 2,
+                "documentation": 4,
+                "wouldBuildAgain": "Yes",
+                "duration": "1 semester"
+            },
+            "metrics": [
+                {
+                    "label": "Course Grade",
+                    "value": "86 (HD)"
+                },
+                {
+                    "label": "Features Shipped",
+                    "value": "Auth + NLP + Infinite Scroll"
+                }
+            ],
+            "caseStudy": {
+                "challenge": "Students needed a trusted platform to share honest course reviews, but existing solutions lacked proper authentication and meaningful analysis of review sentiment.",
+                "solution": "Built a full-stack Django application with Gmail API integration for secure university-email authentication. Integrated Google Cloud NLP to analyze and visualize review sentiment with color-coded indicators. Implemented AJAX-driven infinite scroll for seamless browsing.",
+                "impact": "Achieved High Distinction (86) for the Internet Software Platforms course. Demonstrated full-stack capabilities and API integration skills."
+            },
+            "links": {
+                "github": null
+            },
+            "screenshots": []
+        },
+        {
+            "slug": "robotics-club",
+            "title": "USYD Robotics Club",
+            "tagline": "Scaling a Technical Community",
+            "year": 2023,
+            "featured": true,
+            "poster": "/images/projects/robotics.jpg",
+            "synopsis": "Led Australia's largest university robotics club as President, scaling from 230 to 1,800+ members while delivering 30+ technical events and securing 10+ industry partnerships.",
+            "genre": [
+                "Leadership",
+                "Community",
+                "Education"
+            ],
+            "techStack": [
+                {
+                    "name": "Python",
+                    "role": "Workshop Content"
+                },
+                {
+                    "name": "Arduino",
+                    "role": "Hardware Workshops"
+                },
+                {
+                    "name": "ROS",
+                    "role": "Robotics Framework"
+                },
+                {
+                    "name": "Computer Vision",
+                    "role": "Advanced Workshops"
+                }
+            ],
+            "ratings": {
+                "complexity": "Senior",
+                "coffee": 4,
+                "documentation": 5,
+                "wouldBuildAgain": "Absolutely",
+                "duration": "2 years"
+            },
+            "metrics": [
+                {
+                    "label": "Member Growth",
+                    "value": "230 → 1,800+"
+                },
+                {
+                    "label": "Events Delivered",
+                    "value": "30+"
+                },
+                {
+                    "label": "Industry Partners",
+                    "value": "10+"
+                },
+                {
+                    "label": "Executive Team Size",
+                    "value": "25"
+                }
+            ],
+            "caseStudy": {
+                "challenge": "The club had potential but lacked structure for sustainable growth. An early crisis occurred when 1,100 people signed up for a 60-person event due to an uncapped ticket release error.",
+                "solution": "Immediately halted sales, convened a crisis meeting, and pivoted to a 4-day repeated event format (340 total attendees). Led transparent communication. Shifted culture from 'Growth at all costs' to 'Better, not bigger'—prioritizing team sustainability. Managed end-to-end grant acquittals and created flawless financial ledgers.",
+                "impact": "The new tickets sold out in 3 minutes. Scaled from 230 to 1,800+ members over 2 years. Secured 10+ industry partners including major tech companies. Learned critical lessons about team sustainability and crisis management."
+            },
+            "links": {
+                "website": null
+            },
+            "screenshots": []
+        },
+        {
+            "slug": "finance-tracker",
+            "title": "Personal Finance Tracker",
+            "tagline": "Privacy-First Money Management",
+            "year": 2023,
+            "featured": false,
+            "poster": "/images/projects/finance.jpg",
+            "synopsis": "A privacy-first, local-first personal finance tracker built on AWS Serverless. Features idempotent CSV imports and handles specific bank schemas without sharing credentials.",
+            "genre": [
+                "Serverless",
+                "Privacy",
+                "Personal Project"
+            ],
+            "techStack": [
+                {
+                    "name": "AWS S3",
+                    "role": "File Storage"
+                },
+                {
+                    "name": "AWS Lambda",
+                    "role": "Processing"
+                },
+                {
+                    "name": "DynamoDB",
+                    "role": "Single Table Design"
+                }
+            ],
+            "ratings": {
+                "complexity": "Mid",
+                "coffee": 2,
+                "documentation": 3,
+                "wouldBuildAgain": "Maybe",
+                "duration": "2 weeks"
+            },
+            "metrics": [],
+            "caseStudy": {
+                "challenge": "Existing finance apps require sharing bank credentials or connecting via APIs—a privacy concern. Needed a way to track finances without trusting third parties with sensitive data.",
+                "solution": "Built a serverless pipeline: S3 for CSV ingestion → Lambda for processing → DynamoDB with single-table design. Implemented idempotent re-import logic to handle duplicate uploads. Wrote parsers for specific Australian bank CSV schemas.",
+                "impact": "Full control over personal financial data with zero credential sharing. Demonstrates single-table DynamoDB design and serverless architecture patterns."
+            },
+            "links": {
+                "github": null
+            },
+            "screenshots": []
+        }
+    ],
+    "skills": {
+        "core": [
+            "System Architecture",
+            "Event-Driven Design",
+            "API Integration",
+            "Prompt Engineering",
+            "CI/CD"
+        ],
+        "cloud": [
+            "AWS Lambda",
+            "AWS EventBridge",
+            "AWS S3",
+            "AWS RDS",
+            "AWS API Gateway",
+            "AWS Step Functions",
+            "AWS DynamoDB",
+            "Google Cloud Platform",
+            "OAuth 2.0"
+        ],
+        "databases": [
+            "PostgreSQL",
+            "MySQL",
+            "SQLite",
+            "MongoDB",
+            "DynamoDB"
+        ],
+        "languages": [
+            "Java",
+            "Python",
+            "TypeScript",
+            "JavaScript"
+        ],
+        "tools": [
+            "GitHub",
+            "Azure DevOps",
+            "Docker",
+            "Jira",
+            "Agile/Scrum"
+        ],
+        "ai": [
+            "OpenAI API",
+            "GPT-4o",
+            "Vision API",
+            "Whisper",
+            "LLM Orchestration"
+        ]
+    }
+}
