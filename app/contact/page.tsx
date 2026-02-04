@@ -19,7 +19,7 @@ export default function ContactPage() {
             </div>
 
             {/* Contact Cards */}
-            <div className="max-w-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <div className="max-w-2xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
                 {/* Email */}
                 <a
                     href={`mailto:${profileData.social.email}`}
@@ -71,22 +71,6 @@ export default function ContactPage() {
                     </h2>
                     <p className="text-sm text-[#AAAAAA]">Check out my code</p>
                 </a>
-
-                {/* Phone */}
-                <a
-                    href={`tel:${profileData.social.phone}`}
-                    className="group p-6 bg-[#1A1A1A] rounded-lg border border-[#2A2A2A] hover:border-[#F5C518]/50 transition-all text-center"
-                >
-                    <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-green-500/10 flex items-center justify-center group-hover:bg-green-500/20 transition-colors">
-                        <svg className="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                        </svg>
-                    </div>
-                    <h2 className="text-lg font-semibold text-white mb-1 group-hover:text-[#F5C518] transition-colors">
-                        Phone
-                    </h2>
-                    <p className="text-sm text-[#AAAAAA]">{profileData.social.phone}</p>
-                </a>
             </div>
 
             {/* Availability Card */}
@@ -104,14 +88,6 @@ export default function ContactPage() {
                     <span className="text-white"> Full-Stack Development</span>.
                     <br />
                     Based in Sydney, open to remote opportunities worldwide.
-                </p>
-            </div>
-
-            {/* Fun Fact */}
-            <div className="max-w-xl mx-auto mt-12 text-center">
-                <p className="text-sm text-[#6B6B6B]">
-                    Fun fact: I respond faster to interesting technical challenges
-                    than to LinkedIn recruiter templates. Just saying. 🤷‍♂️
                 </p>
             </div>
         </div>

@@ -1,148 +1,252 @@
 {
     "projects": [
         {
-            "slug": "done-life",
-            "title": "Done. Life",
-            "tagline": "AI Productivity Platform",
-            "year": 2024,
+            "slug": "honours-thesis",
+            "title": "Precision Irrigation with Federated Learning",
+            "tagline": "Privacy-Preserving Agriculture AI",
+            "year": 2025,
             "featured": true,
-            "poster": "/images/projects/done-life.jpg",
-            "synopsis": "An AI-first platform that automates 'Life Admin' by converting unstructured emails, PDFs, and images into structured calendar events. Built from zero-to-one as a solo founder.",
+            "poster": "/images/projects/thesis.svg",
+            "synopsis": "Honours thesis combining decentralised AI with edge computing for sustainable agriculture. Developed a federated learning framework on Raspberry Pi devices to predict irrigation needs while preserving farmer data privacy.",
             "genre": [
                 "AI/ML",
-                "Mobile",
-                "Serverless"
+                "IoT",
+                "Research"
             ],
             "techStack": [
                 {
-                    "name": "OpenAI GPT-4o",
-                    "role": "AI Engine"
+                    "name": "PyTorch",
+                    "role": "ML Framework"
                 },
                 {
-                    "name": "OpenAI Vision",
-                    "role": "Image Processing"
+                    "name": "Raspberry Pi",
+                    "role": "Edge Devices"
                 },
                 {
-                    "name": "AWS Lambda",
-                    "role": "Serverless Compute"
+                    "name": "Federated Learning",
+                    "role": "Privacy-Preserving ML"
                 },
                 {
-                    "name": "DynamoDB",
-                    "role": "Database"
+                    "name": "Python",
+                    "role": "Implementation"
                 },
                 {
-                    "name": "Make.com",
-                    "role": "Workflow Orchestration"
-                },
-                {
-                    "name": "Adalo",
-                    "role": "Mobile Frontend"
-                },
-                {
-                    "name": "IAPHUB",
-                    "role": "In-App Purchases"
+                    "name": "SSH",
+                    "role": "Secure Communication"
                 }
             ],
             "ratings": {
                 "complexity": "Principal",
                 "coffee": 5,
-                "documentation": 4,
+                "documentation": 5,
                 "wouldBuildAgain": "Absolutely",
-                "duration": "8 weeks (Zero-to-One)"
+                "duration": "12 months"
             },
             "metrics": [
                 {
-                    "label": "Processing Error Reduction",
-                    "value": "~40%"
+                    "label": "R² Score (Federated)",
+                    "value": "0.6-0.7"
                 },
                 {
-                    "label": "Non-actionable Attachment Filtering",
-                    "value": "90%"
+                    "label": "R² Score (Centralised)",
+                    "value": "0.7-0.8"
                 },
                 {
-                    "label": "Time to App Store",
-                    "value": "8 weeks"
+                    "label": "Data Privacy",
+                    "value": "100%"
                 }
             ],
             "caseStudy": {
-                "challenge": "Users drown in 'Life Admin'—bills, appointments, event invites buried in emails. Manually copying dates to calendars is tedious and error-prone. The AI challenge: LLMs frequently 'hallucinated' dates, calculating relative dates from their training data cut-off instead of the current date.",
-                "solution": "Engineered a 'Context Anchor' injection system that dynamically injects the current ISO timestamp and day of week at inference time. Built a 'Split-Path Engine' to route traffic between low-latency text models and high-compute vision models based on payload analysis. Implemented aggressive 'Junk Filters' to discard non-actionable attachments (<5KB signatures/icons).",
-                "impact": "Completely solved the temporal hallucination issue. The 'Forward-to-Email' feature became the app's most-used ingress method. Reduced API costs by filtering 90% of junk attachments. Successfully launched on App Store within 8-week timeline."
+                "challenge": "Agriculture accounts for 70% of global freshwater consumption, yet 40% is wasted. Farmers hesitate to share sensitive crop data with central servers, and rural areas lack reliable internet for cloud-based AI.",
+                "solution": "Built a custom Federated Learning framework from scratch. Used Raspberry Pi devices as edge nodes running MLP networks in PyTorch. Only anonymous model updates transmitted via SSH, keeping raw data local. Tested on Autonomous Greenhouse Challenge data for tomato production.",
+                "impact": "Achieved R² of 0.6-0.7 for irrigation prediction, close to centralised baseline of 0.7-0.8, while guaranteeing 100% data privacy. Published findings with industry partner Accenture."
             },
             "links": {
-                "live": null,
                 "github": null,
-                "appStore": null
+                "paper": null
             },
             "screenshots": []
         },
         {
-            "slug": "accenture-permissions",
-            "title": "Serverless Permissions Platform",
-            "tagline": "Enterprise Security Automation",
-            "year": 2024,
+            "slug": "transaction-sentiment",
+            "title": "Transaction Sentiment Analyser",
+            "tagline": "Financial Data Compliance Tool",
+            "year": 2023,
             "featured": true,
-            "poster": "/images/projects/accenture.jpg",
-            "synopsis": "Automated the manual, error-prone process of updating user permissions in OpenSearch. Transformed a ticket-based workflow into a fully automated, auditable self-service API.",
+            "poster": "/images/projects/sentiment-analyser.svg",
+            "synopsis": "Spring Boot application that analyses financial transaction descriptions for negative sentiment and automatically censors profanity. Built for Macquarie Coding Fest hackathon.",
             "genre": [
-                "Cloud",
-                "Enterprise",
-                "Security"
+                "AI/ML",
+                "FinTech",
+                "Hackathon"
             ],
             "techStack": [
                 {
-                    "name": "AWS API Gateway",
-                    "role": "API Layer"
+                    "name": "Java 17",
+                    "role": "Backend"
                 },
                 {
-                    "name": "AWS EventBridge",
-                    "role": "Event Routing"
+                    "name": "Spring Boot",
+                    "role": "Framework"
+                },
+                {
+                    "name": "Google Cloud NLP",
+                    "role": "Sentiment Analysis"
+                },
+                {
+                    "name": "MongoDB",
+                    "role": "Database"
+                },
+                {
+                    "name": "ActiveMQ",
+                    "role": "Message Queue"
+                }
+            ],
+            "ratings": {
+                "complexity": "Mid",
+                "coffee": 3,
+                "documentation": 3,
+                "wouldBuildAgain": "Yes",
+                "duration": "48 hours"
+            },
+            "metrics": [],
+            "caseStudy": {
+                "challenge": "Banks need to monitor transaction data for compliance and improve customer experience by detecting inappropriate content in transaction descriptions.",
+                "solution": "Built REST API endpoints to submit transactions for processing. Integrated Google Cloud Natural Language API for sentiment detection. Implemented automatic profanity censorship based on configurable bad_words.json. Used MongoDB for persistence and JMS for async processing.",
+                "impact": "Demonstrated rapid prototyping skills at Macquarie Coding Fest 2023. Provided proof-of-concept for automated transaction monitoring."
+            },
+            "links": {
+                "github": null
+            },
+            "screenshots": []
+        },
+        {
+            "slug": "aws-image-annotation",
+            "title": "Scalable Image Annotation App",
+            "tagline": "Cloud-Native AI Gallery",
+            "year": 2024,
+            "featured": true,
+            "poster": "/images/projects/aws-annotation.svg",
+            "synopsis": "AWS cloud-native solution combining EC2 Auto Scaling with serverless Lambda functions. Users upload images and receive AI-generated captions via Gemini API integration.",
+            "genre": [
+                "Cloud",
+                "AI/ML",
+                "Full-Stack"
+            ],
+            "techStack": [
+                {
+                    "name": "AWS EC2",
+                    "role": "Web Server"
                 },
                 {
                     "name": "AWS Lambda",
-                    "role": "Compute"
+                    "role": "Serverless Processing"
                 },
                 {
-                    "name": "AWS Step Functions",
-                    "role": "Orchestration"
+                    "name": "AWS S3",
+                    "role": "Image Storage"
                 },
                 {
-                    "name": "OpenSearch",
-                    "role": "Target System"
+                    "name": "AWS RDS",
+                    "role": "MySQL Database"
+                },
+                {
+                    "name": "AWS ALB",
+                    "role": "Load Balancer"
+                },
+                {
+                    "name": "AWS SNS",
+                    "role": "Event Notifications"
+                },
+                {
+                    "name": "Gemini API",
+                    "role": "AI Captions"
                 },
                 {
                     "name": "CloudFormation",
-                    "role": "Infrastructure as Code"
+                    "role": "IaC"
+                },
+                {
+                    "name": "Flask",
+                    "role": "Web Framework"
                 }
             ],
             "ratings": {
                 "complexity": "Senior",
-                "coffee": 3,
-                "documentation": 5,
-                "wouldBuildAgain": "Yes",
-                "duration": "6 months"
+                "coffee": 4,
+                "documentation": 4,
+                "wouldBuildAgain": "Absolutely",
+                "duration": "4 weeks"
+            },
+            "metrics": [],
+            "caseStudy": {
+                "challenge": "Build a scalable, event-driven image processing pipeline that can handle variable load while demonstrating AWS architecture best practices.",
+                "solution": "Implemented hybrid architecture: Flask web frontend on EC2 ASG behind ALB, with serverless Lambda functions triggered by S3 events via SNS. One Lambda generates Gemini API captions, another creates thumbnails. Complete IaC deployment via CloudFormation.",
+                "impact": "Demonstrated expertise in AWS architecture, Infrastructure as Code, auto-scaling patterns, and generative AI integration."
+            },
+            "links": {
+                "github": null
+            },
+            "screenshots": []
+        },
+        {
+            "slug": "tomato-leaf-detection",
+            "title": "Tomato Leaf Disease Detection",
+            "tagline": "AI-Powered Crop Health Monitoring",
+            "year": 2024,
+            "featured": true,
+            "poster": "/images/projects/tomato-detection.svg",
+            "synopsis": "Custom YOLO-11M object detection model for automated identification of 7 distinct tomato leaf diseases. Implemented Fourier-based regularization for sharper disease localization.",
+            "genre": [
+                "AI/ML",
+                "Computer Vision",
+                "Agriculture"
+            ],
+            "techStack": [
+                {
+                    "name": "YOLO-11M",
+                    "role": "Object Detection"
+                },
+                {
+                    "name": "PyTorch",
+                    "role": "ML Framework"
+                },
+                {
+                    "name": "FFT",
+                    "role": "Fourier Loss"
+                },
+                {
+                    "name": "Python",
+                    "role": "Implementation"
+                }
+            ],
+            "ratings": {
+                "complexity": "Senior",
+                "coffee": 4,
+                "documentation": 4,
+                "wouldBuildAgain": "Absolutely",
+                "duration": "8 weeks"
             },
             "metrics": [
                 {
-                    "label": "Manual Effort Reduction",
-                    "value": "80%"
+                    "label": "Precision",
+                    "value": "78.16%"
                 },
                 {
-                    "label": "Daily Tickets Automated",
-                    "value": "~10/day"
+                    "label": "mAP@50",
+                    "value": "83.28%"
                 },
                 {
-                    "label": "Update Latency",
-                    "value": "Near-instant"
+                    "label": "Inference Speed",
+                    "value": "~22ms"
                 }
             ],
             "caseStudy": {
-                "challenge": "The team manually processed ~10 tickets/day for user permissions in OpenSearch. The process was slow, error-prone, and created bottlenecks. Security misconfigurations could go unnoticed.",
-                "solution": "Architected an EventBridge Pipe → Step Function workflow. Created CloudFormation templates for repeatable deployments. Built state machine logic to handle Add/Modify/Delete operations with full audit logging. Wrote comprehensive runbooks for operations.",
-                "impact": "80% reduction in manual work. Latency dropped from hours to near-instantaneous. Discovered and patched a security misconfiguration that also existed in Production—turned a deployment mistake into a security hardening win."
+                "challenge": "Manual crop inspection is time-consuming and error-prone. Need to identify 7 distinct leaf states including Bacterial Spot, Early Blight, and Late Blight with precise localization.",
+                "solution": "Built custom YOLO-11M architecture with C2f Fusion Blocks (25% parameter reduction), SPPF for multi-scale pooling, and Polarized Self-Attention. Innovated with Fourier Loss term using 2D FFT to preserve high-frequency edge details.",
+                "impact": "Fourier-enhanced model improved Box Precision by 2.4% and mAP@50 by 2.4% over baseline with zero inference overhead. Model focuses on disease textures rather than being distracted by shadows or dirt."
             },
             "links": {
-                "live": null,
                 "github": null
             },
             "screenshots": []
@@ -152,8 +256,8 @@
             "title": "Scholar Score",
             "tagline": "University Review Platform",
             "year": 2023,
-            "featured": true,
-            "poster": "/images/projects/scholar-score.jpg",
+            "featured": false,
+            "poster": "/images/projects/scholar-score.svg",
             "synopsis": "A Django web platform for university course reviews with sentiment analysis. Features secure university-email authentication, AJAX-driven infinite scroll, and dynamic sentiment coloring using NLP.",
             "genre": [
                 "Full-Stack",
@@ -179,24 +283,24 @@
                 },
                 {
                     "name": "JavaScript",
-                    "role": "Frontend Interactivity"
+                    "role": "Frontend (AJAX)"
+                },
+                {
+                    "name": "OAuth 2.0",
+                    "role": "Security"
                 }
             ],
             "ratings": {
-                "complexity": "Mid",
-                "coffee": 2,
+                "complexity": "Senior",
+                "coffee": 4,
                 "documentation": 4,
                 "wouldBuildAgain": "Yes",
-                "duration": "1 semester"
+                "duration": "4 weeks"
             },
             "metrics": [
                 {
                     "label": "Course Grade",
                     "value": "86 (HD)"
-                },
-                {
-                    "label": "Features Shipped",
-                    "value": "Auth + NLP + Infinite Scroll"
                 }
             ],
             "caseStudy": {
@@ -210,69 +314,112 @@
             "screenshots": []
         },
         {
-            "slug": "robotics-club",
-            "title": "USYD Robotics Club",
-            "tagline": "Scaling a Technical Community",
+            "slug": "smart-smoke-alarm",
+            "title": "Smart Smoke Alarm ML Analysis",
+            "tagline": "Fire Safety Enhancement Research",
             "year": 2023,
-            "featured": true,
-            "poster": "/images/projects/robotics.jpg",
-            "synopsis": "Led Australia's largest university robotics club as President, scaling from 230 to 1,800+ members while delivering 30+ technical events and securing 10+ industry partnerships.",
+            "featured": false,
+            "poster": "/images/projects/smoke-alarm.svg",
+            "synopsis": "Machine learning research to modernize smoke alarm technology. Evaluated 5 algorithms on 60,000+ IoT observations to reduce false alarms while eliminating failures in detecting real fires.",
             "genre": [
-                "Leadership",
-                "Community",
-                "Education"
+                "AI/ML",
+                "IoT",
+                "Research"
             ],
             "techStack": [
                 {
                     "name": "Python",
-                    "role": "Workshop Content"
+                    "role": "Implementation"
                 },
                 {
-                    "name": "Arduino",
-                    "role": "Hardware Workshops"
+                    "name": "Scikit-learn",
+                    "role": "ML Framework"
                 },
                 {
-                    "name": "ROS",
-                    "role": "Robotics Framework"
+                    "name": "Random Forest",
+                    "role": "Feature Selection"
                 },
                 {
-                    "name": "Computer Vision",
-                    "role": "Advanced Workshops"
+                    "name": "KNN",
+                    "role": "Best Performer"
+                },
+                {
+                    "name": "Google Colab",
+                    "role": "Compute"
                 }
             ],
             "ratings": {
-                "complexity": "Senior",
-                "coffee": 4,
-                "documentation": 5,
-                "wouldBuildAgain": "Absolutely",
-                "duration": "2 years"
+                "complexity": "Mid",
+                "coffee": 3,
+                "documentation": 4,
+                "wouldBuildAgain": "Yes",
+                "duration": "6 weeks"
             },
             "metrics": [
                 {
-                    "label": "Member Growth",
-                    "value": "230 → 1,800+"
+                    "label": "WNN Accuracy",
+                    "value": "99.97%"
                 },
                 {
-                    "label": "Events Delivered",
-                    "value": "30+"
+                    "label": "AUC Score",
+                    "value": "0.9997"
                 },
                 {
-                    "label": "Industry Partners",
-                    "value": "10+"
-                },
-                {
-                    "label": "Executive Team Size",
-                    "value": "25"
+                    "label": "False Negative Rate",
+                    "value": "0.04%"
                 }
             ],
             "caseStudy": {
-                "challenge": "The club had potential but lacked structure for sustainable growth. An early crisis occurred when 1,100 people signed up for a 60-person event due to an uncapped ticket release error.",
-                "solution": "Immediately halted sales, convened a crisis meeting, and pivoted to a 4-day repeated event format (340 total attendees). Led transparent communication. Shifted culture from 'Growth at all costs' to 'Better, not bigger'—prioritizing team sustainability. Managed end-to-end grant acquittals and created flawless financial ledgers.",
-                "impact": "The new tickets sold out in 3 minutes. Scaled from 230 to 1,800+ members over 2 years. Secured 10+ industry partners including major tech companies. Learned critical lessons about team sustainability and crisis management."
+                "challenge": "Traditional smoke alarm technology unchanged since 1970s. In 2015, Australian false fire alarms were 97%, while ionisation alarms had 55% failure rate in real fires. This creates public complacency.",
+                "solution": "Analyzed 60,000+ IoT observations including temperature, humidity, CO₂, and particle size. Tested 5 algorithms: KNN (weighted/unweighted), Naive Bayes (Multinomial/Gaussian), Logistic Regression, and MLP. Used Random Forest for feature selection and 70-30 cross-validation.",
+                "impact": "Weighted KNN achieved 99.97% accuracy with only 0.04% false negative rate (missed 2 fires out of 15,000 tests). Neural network had dangerous 13.95% false negative rate. Findings suitable for industry pitch to Bosch, Honeywell, ABB."
             },
             "links": {
-                "website": null
+                "github": null
             },
+            "screenshots": []
+        },
+        {
+            "slug": "atar-calculator-fix",
+            "title": "USYD ATAR Calculator Docker Migration",
+            "tagline": "Legacy Tool Containerization",
+            "year": 2024,
+            "featured": false,
+            "poster": "/images/projects/atar-calculator.svg",
+            "synopsis": "Technical consultancy for Faculty of Engineering Admissions. Containerized a mission-critical legacy ATAR calculator using Docker to resolve OS-compatibility issues.",
+            "genre": [
+                "DevOps",
+                "Consulting"
+            ],
+            "techStack": [
+                {
+                    "name": "Docker",
+                    "role": "Containerization"
+                },
+                {
+                    "name": "Linux",
+                    "role": "Container OS"
+                }
+            ],
+            "ratings": {
+                "complexity": "Mid",
+                "coffee": 2,
+                "documentation": 3,
+                "wouldBuildAgain": "Yes",
+                "duration": "1 week"
+            },
+            "metrics": [
+                {
+                    "label": "Downtime Prevented",
+                    "value": "100%"
+                }
+            ],
+            "caseStudy": {
+                "challenge": "Mission-critical legacy ATAR calculation tool was failing due to OS-compatibility issues during high-stakes admissions periods.",
+                "solution": "Conducted stakeholder interviews to understand requirements and constraints. Used Docker to containerize the tool into a portable image that could run consistently across different operating systems.",
+                "impact": "Provided 'heroic' relief to non-technical staff, ensuring operational continuity during critical admissions periods."
+            },
+            "links": {},
             "screenshots": []
         },
         {
@@ -281,7 +428,7 @@
             "tagline": "Privacy-First Money Management",
             "year": 2023,
             "featured": false,
-            "poster": "/images/projects/finance.jpg",
+            "poster": "/images/projects/finance-tracker.svg",
             "synopsis": "A privacy-first, local-first personal finance tracker built on AWS Serverless. Features idempotent CSV imports and handles specific bank schemas without sharing credentials.",
             "genre": [
                 "Serverless",

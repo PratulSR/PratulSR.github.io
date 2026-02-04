@@ -2,7 +2,9 @@
     "experience": [
         {
             "id": "done-life",
+            "slug": "done-life",
             "company": "Done. Life",
+            "logo": "/images/logos/done-life.svg",
             "role": "Founding Engineer & Product Lead",
             "type": "Founding Role",
             "startDate": "Dec 2024",
@@ -10,6 +12,13 @@
             "current": true,
             "location": "Sydney, Australia",
             "description": "AI-first productivity platform automating 'Life Admin' workflows",
+            "synopsis": "Leading the end-to-end product lifecycle for an AI-first productivity platform that automates 'Life Admin' by converting unstructured emails, PDFs, and images into structured calendar events.",
+            "tagline": "Zero-to-One AI Startup",
+            "genre": [
+                "AI/ML",
+                "Mobile",
+                "Serverless"
+            ],
             "highlights": [
                 "Architected a serverless, event-driven backend to automate complex 'Life Admin' workflows for consumers",
                 "Engineered a custom traffic router that dynamically directs payloads between low-latency text models and high-compute vision models, reducing processing overhead by ~40% and response times by ~70%",
@@ -17,19 +26,69 @@
                 "Led the end-to-end product lifecycle from Zero-to-One, managing full stack & navigating App Store compliance"
             ],
             "techStack": [
-                "AWS Lambda",
-                "OpenAI API",
-                "Make.com",
-                "Adalo",
-                "DynamoDB"
+                {
+                    "name": "AWS Lambda",
+                    "role": "Serverless Compute"
+                },
+                {
+                    "name": "OpenAI GPT-4o",
+                    "role": "AI Engine"
+                },
+                {
+                    "name": "OpenAI Vision",
+                    "role": "Image Processing"
+                },
+                {
+                    "name": "Make.com",
+                    "role": "Workflow Orchestration"
+                },
+                {
+                    "name": "Adalo",
+                    "role": "Mobile Frontend"
+                },
+                {
+                    "name": "DynamoDB",
+                    "role": "Database"
+                },
+                {
+                    "name": "IAPHUB",
+                    "role": "In-App Purchases"
+                }
             ],
-            "projects": [
-                "done-life"
-            ]
+            "ratings": {
+                "complexity": "Principal",
+                "coffee": 5,
+                "documentation": 4,
+                "wouldBuildAgain": "Absolutely",
+                "duration": "8 weeks (Zero-to-One)"
+            },
+            "metrics": [
+                {
+                    "label": "Processing Error Reduction",
+                    "value": "~40%"
+                },
+                {
+                    "label": "Non-actionable Attachment Filtering",
+                    "value": "90%"
+                },
+                {
+                    "label": "Time to App Store",
+                    "value": "8 weeks"
+                }
+            ],
+            "caseStudy": {
+                "challenge": "Users drown in 'Life Admin'—bills, appointments, event invites buried in emails. Manually copying dates to calendars is tedious and error-prone. The AI challenge: LLMs frequently 'hallucinated' dates, calculating relative dates from their training data cut-off instead of the current date.",
+                "solution": "Engineered a 'Context Anchor' injection system that dynamically injects the current ISO timestamp and day of week at inference time. Built a 'Split-Path Engine' to route traffic between low-latency text models and high-compute vision models based on payload analysis. Implemented aggressive 'Junk Filters' to discard non-actionable attachments (<5KB signatures/icons).",
+                "impact": "Completely solved the temporal hallucination issue. The 'Forward-to-Email' feature became the app's most-used ingress method. Reduced API costs by filtering 90% of junk attachments. Successfully launched on App Store within 8-week timeline."
+            },
+            "links": {},
+            "screenshots": []
         },
         {
             "id": "accenture",
+            "slug": "accenture",
             "company": "Accenture",
+            "logo": "/images/logos/accenture.svg",
             "role": "Software Engineer",
             "type": "Full-time",
             "startDate": "Jun 2024",
@@ -37,27 +96,80 @@
             "current": false,
             "location": "Sydney, Australia",
             "description": "Central Monitoring Team - Serverless infrastructure & automation",
+            "synopsis": "Worked on the Central Monitoring Team building serverless infrastructure and automation for enterprise-scale OpenSearch deployments.",
+            "tagline": "Enterprise Security Automation",
+            "genre": [
+                "Cloud",
+                "Enterprise",
+                "Security"
+            ],
             "highlights": [
                 "Designed and deployed a serverless API platform on AWS to manage large-scale OpenSearch permissions",
                 "Built event-driven workflows with EventBridge + Step Functions, mirroring stream-processing systems",
                 "Automated infrastructure provisioning with CloudFormation (IaC), reducing manual setup by 80%",
+                "Discovered and patched a security misconfiguration that also existed in Production—turned a deployment mistake into a security hardening win",
                 "Delivered features in a fully agile scrum team, contributing to sprint planning, reviews, and retrospectives"
             ],
             "techStack": [
-                "AWS",
-                "Lambda",
-                "EventBridge",
-                "Step Functions",
-                "CloudFormation",
-                "OpenSearch"
+                {
+                    "name": "AWS API Gateway",
+                    "role": "API Layer"
+                },
+                {
+                    "name": "AWS EventBridge",
+                    "role": "Event Routing"
+                },
+                {
+                    "name": "AWS Lambda",
+                    "role": "Compute"
+                },
+                {
+                    "name": "AWS Step Functions",
+                    "role": "Orchestration"
+                },
+                {
+                    "name": "OpenSearch",
+                    "role": "Target System"
+                },
+                {
+                    "name": "CloudFormation",
+                    "role": "Infrastructure as Code"
+                }
             ],
-            "projects": [
-                "accenture-permissions"
-            ]
+            "ratings": {
+                "complexity": "Senior",
+                "coffee": 3,
+                "documentation": 5,
+                "wouldBuildAgain": "Yes",
+                "duration": "6 months"
+            },
+            "metrics": [
+                {
+                    "label": "Manual Effort Reduction",
+                    "value": "80%"
+                },
+                {
+                    "label": "Daily Tickets Automated",
+                    "value": "~10/day"
+                },
+                {
+                    "label": "Update Latency",
+                    "value": "Near-instant"
+                }
+            ],
+            "caseStudy": {
+                "challenge": "The team manually processed ~10 tickets/day for user permissions in OpenSearch. The process was slow, error-prone, and created bottlenecks. Security misconfigurations could go unnoticed.",
+                "solution": "Architected an EventBridge Pipe → Step Function workflow. Created CloudFormation templates for repeatable deployments. Built state machine logic to handle Add/Modify/Delete operations with full audit logging. Wrote comprehensive runbooks for operations.",
+                "impact": "80% reduction in manual work. Latency dropped from hours to near-instantaneous. Discovered and patched a security misconfiguration that also existed in Production—turned a deployment mistake into a security hardening win."
+            },
+            "links": {},
+            "screenshots": []
         },
         {
             "id": "usyd-academic",
+            "slug": "usyd-academic",
             "company": "University of Sydney",
+            "logo": "/images/logos/usyd.svg",
             "role": "Casual Academic",
             "type": "Part-time",
             "startDate": "Feb 2024",
@@ -65,44 +177,459 @@
             "current": true,
             "location": "Sydney, Australia",
             "description": "Teaching machine learning and Python to engineering students",
+            "synopsis": "Tutoring and mentoring engineering students in machine learning, Python, and practical data science workflows.",
+            "tagline": "Teaching the Next Generation",
+            "genre": [
+                "Education",
+                "AI/ML",
+                "Mentorship"
+            ],
             "highlights": [
                 "Tutored 335+ students in machine learning and Python workflows for practical engineering use cases",
                 "Mentored students in applying AI/ML to real-world engineering datasets",
-                "Received 95% positive feedback from students"
+                "Achieved 95% positive feedback from students across multiple semesters",
+                "Created inclusive classroom culture with 'no wrong questions' philosophy",
+                "Provided detailed feedback after quizzes, ensuring thorough understanding"
             ],
             "techStack": [
-                "Python",
-                "Pandas",
-                "NumPy",
-                "Scikit-learn"
+                {
+                    "name": "Python",
+                    "role": "Core Language"
+                },
+                {
+                    "name": "Pandas",
+                    "role": "Data Analysis"
+                },
+                {
+                    "name": "NumPy",
+                    "role": "Numerical Computing"
+                },
+                {
+                    "name": "Scikit-learn",
+                    "role": "Machine Learning"
+                }
             ],
-            "projects": []
-        },
+            "ratings": {
+                "complexity": "Mid",
+                "coffee": 3,
+                "documentation": 4,
+                "wouldBuildAgain": "Absolutely",
+                "duration": "Ongoing"
+            },
+            "metrics": [
+                {
+                    "label": "Students Taught",
+                    "value": "335+"
+                },
+                {
+                    "label": "Positive Feedback",
+                    "value": "95%"
+                },
+                {
+                    "label": "Semesters",
+                    "value": "3+"
+                }
+            ],
+            "caseStudy": {
+                "challenge": "Engineering students often struggle with the transition from theoretical concepts to practical machine learning implementation. Many feel intimidated by coding and hesitant to ask questions.",
+                "solution": "Established a 'no wrong questions' classroom culture. Provided proactive check-ins and email support for project milestones. Gave detailed quiz feedback focusing on understanding rather than just marks. Encouraged peer collaboration and group work.",
+                "impact": "95% positive anonymous feedback. Students reported feeling confident to apply ML concepts to their engineering projects. Many students continued to reach out for advice even after the course ended."
+            },
+            "testimonials": [
+                {
+                    "quote": "Pratul understood that we had knowledge gaps and gave us advice to help us expand our knowledge. He did not just supply answers and made sure to revise where possible.",
+                    "author": "Anonymous Student"
+                },
+                {
+                    "quote": "Made it easy and assumed that not everyone knew everything.",
+                    "author": "Anonymous Student"
+                },
+                {
+                    "quote": "Gave lots of useful feedback especially after quizzes. Went through the questions thoroughly and really made sure the whole class was engaged.",
+                    "author": "Anonymous Student"
+                },
+                {
+                    "quote": "He was very concerned and even asked us to email him an update so that he can supervise our progress.",
+                    "author": "Anonymous Student"
+                },
+                {
+                    "quote": "Good class culture, no wrong questions/answers, made feedback lighthearted.",
+                    "author": "Anonymous Student"
+                },
+                {
+                    "quote": "Stimulated learning through constructive feedback not just giving the answer. Supported us in choices with project and made sure to help us understand what these objectives would be.",
+                    "author": "Anonymous Student"
+                },
+                {
+                    "quote": "Pratul had energy and passion to help others learn. He was easy to communicate with, effective in help/feedback and promoted a good classroom culture.",
+                    "author": "Anonymous Student"
+                },
+                {
+                    "quote": "He did not get angry on us for having bad score but instead questioning what was wrong with the current teaching method.",
+                    "author": "Anonymous Student"
+                },
+                {
+                    "quote": "I felt that he knew all our names individually and cared about our progress.",
+                    "author": "Anonymous Student"
+                },
+                {
+                    "quote": "The best tutor ever!!!!!",
+                    "author": "Anonymous Student"
+                }
+            ],
+            "links": {},
+            "screenshots": []
+        }
+    ],
+    "leadership": [
         {
             "id": "usyd-robotics",
+            "slug": "usyd-robotics",
             "company": "USYD Robotics Club",
-            "role": "President",
+            "logo": "/images/logos/usrc.svg",
+            "roles": [
+                {
+                    "title": "President",
+                    "startDate": "Aug 2023",
+                    "endDate": "Aug 2025"
+                },
+                {
+                    "title": "Workshop Coordinator",
+                    "startDate": "Sep 2022",
+                    "endDate": "Aug 2023"
+                }
+            ],
             "type": "Leadership",
-            "startDate": "Aug 2023",
+            "startDate": "Sep 2022",
             "endDate": "Aug 2025",
             "current": false,
             "location": "Sydney, Australia",
             "description": "Led Australia's largest university robotics club",
+            "synopsis": "Grew from Workshop Coordinator to President of Australia's largest university robotics club, scaling from 230 to 1,800+ members.",
+            "tagline": "Scaling a Technical Community",
+            "genre": [
+                "Leadership",
+                "Community",
+                "Education"
+            ],
             "highlights": [
                 "Directed a 25-member engineering team delivering 30+ events",
                 "Scaled operations from 230 to 1,800+ members in 2 years",
+                "Led a team of 5 to teach introductory robotics to 70+ students every week",
+                "Developed Arduino, OpenCV (Python) and X-Y Plotter learning modules for university students of all disciplines",
                 "Delivered cross-disciplinary workshops on programming, computer vision, and embedded systems",
-                "Secured 10+ industry partners and acted as key liaison between technical teams and stakeholders"
+                "Secured 10+ industry partners and acted as key liaison between technical teams and stakeholders",
+                "The only member of the team with no prior robotics experience / not studying mechatronics"
             ],
             "techStack": [
-                "Python",
-                "Arduino",
-                "ROS",
-                "Computer Vision"
+                {
+                    "name": "Python",
+                    "role": "Workshop Content"
+                },
+                {
+                    "name": "Arduino",
+                    "role": "Hardware Workshops"
+                },
+                {
+                    "name": "ROS",
+                    "role": "Robotics Framework"
+                },
+                {
+                    "name": "Computer Vision",
+                    "role": "Advanced Workshops"
+                },
+                {
+                    "name": "Raspberry Pi",
+                    "role": "Edge Computing"
+                },
+                {
+                    "name": "OpenCV",
+                    "role": "Vision Processing"
+                }
             ],
-            "projects": [
-                "robotics-club"
-            ]
+            "ratings": {
+                "complexity": "Senior",
+                "coffee": 4,
+                "documentation": 5,
+                "wouldBuildAgain": "Absolutely",
+                "duration": "3 years"
+            },
+            "metrics": [
+                {
+                    "label": "Member Growth",
+                    "value": "230 → 1,800+"
+                },
+                {
+                    "label": "Events Delivered",
+                    "value": "30+"
+                },
+                {
+                    "label": "Industry Partners",
+                    "value": "10+"
+                },
+                {
+                    "label": "Executive Team Size",
+                    "value": "25"
+                }
+            ],
+            "caseStudy": {
+                "challenge": "The club had potential but lacked structure for sustainable growth. An early crisis occurred when 1,100 people signed up for a 60-person event due to an uncapped ticket release error.",
+                "solution": "Immediately halted sales, convened a crisis meeting, and pivoted to a 4-day repeated event format (340 total attendees). Led transparent communication. Shifted culture from 'Growth at all costs' to 'Better, not bigger'—prioritizing team sustainability. Managed end-to-end grant acquittals and created flawless financial ledgers.",
+                "impact": "The new tickets sold out in 3 minutes. Scaled from 230 to 1,800+ members over 2 years. Secured 10+ industry partners including major tech companies. Learned critical lessons about team sustainability and crisis management."
+            },
+            "links": {},
+            "screenshots": []
+        },
+        {
+            "id": "ewb",
+            "slug": "ewb",
+            "company": "Engineers Without Borders Australia",
+            "logo": "/images/logos/ewb.svg",
+            "roles": [
+                {
+                    "title": "General Volunteer",
+                    "startDate": "May 2022",
+                    "endDate": "Nov 2023"
+                }
+            ],
+            "type": "Volunteer",
+            "startDate": "May 2022",
+            "endDate": "Nov 2023",
+            "current": false,
+            "location": "Sydney, Australia",
+            "description": "Promoting Engineering as an exciting career to K-12 students",
+            "synopsis": "Delivered hands-on STEM workshops to Years 5-12 students, promoting Engineering as an exciting career option with emphasis on Sustainable and Humanitarian Engineering.",
+            "tagline": "Inspiring the Next Generation",
+            "genre": [
+                "Education",
+                "Volunteer",
+                "STEM"
+            ],
+            "highlights": [
+                "Delivered 100+ hours of thematic learning modules & conducted creative, hands-on workshops with students of Years 5-12",
+                "Promoted Engineering as an exciting career option, with special emphasis on Sustainable and Humanitarian Engineering",
+                "Regularly tasked with helping new volunteers get up to speed with our common aim of sharing our passion for Engineering"
+            ],
+            "techStack": [
+                {
+                    "name": "Teaching",
+                    "role": "Core Skill"
+                },
+                {
+                    "name": "Teamwork",
+                    "role": "Collaboration"
+                },
+                {
+                    "name": "Working With Children",
+                    "role": "Certification"
+                },
+                {
+                    "name": "Knowledge Engineering",
+                    "role": "Curriculum Design"
+                }
+            ],
+            "ratings": {
+                "complexity": "Mid",
+                "coffee": 2,
+                "documentation": 3,
+                "wouldBuildAgain": "Absolutely",
+                "duration": "18 months"
+            },
+            "metrics": [
+                {
+                    "label": "Volunteer Hours",
+                    "value": "100+"
+                },
+                {
+                    "label": "Student Age Range",
+                    "value": "Years 5-12"
+                }
+            ],
+            "caseStudy": {
+                "challenge": "Many students have limited exposure to engineering concepts and don't see it as a viable career path, especially in underrepresented communities.",
+                "solution": "Designed and delivered hands-on workshops that made engineering tangible and fun. Focused on sustainable and humanitarian applications to show the positive impact engineers can have on the world.",
+                "impact": "Helped inspire students to consider engineering as a career path. Mentored new volunteers to maintain quality of workshop delivery."
+            },
+            "links": {},
+            "screenshots": []
+        }
+    ],
+    "variousRoles": [
+        {
+            "id": "usyd-communicator",
+            "slug": "usyd-communicator",
+            "company": "University of Sydney",
+            "logo": "/images/logos/usyd.svg",
+            "role": "Faculty Communicator",
+            "type": "Part-time",
+            "startDate": "Nov 2023",
+            "endDate": "Present",
+            "current": true,
+            "location": "Sydney, Australia",
+            "description": "Coordinating workshops and program events between students, staff and partners",
+            "synopsis": "Liaising between students, academic staff, and external partners to coordinate workshops and program events for the Faculty of Engineering.",
+            "tagline": "Bridging Stakeholders",
+            "genre": [
+                "Communication",
+                "Events",
+                "Coordination"
+            ],
+            "highlights": [
+                "Liaising between students, academic staff & external partners to coordinate workshops and program events",
+                "Managing communications, schedules & resources, producing briefings & slide decks for diverse audiences",
+                "Driving continuous improvement through participant feedback & translating it into practical program changes",
+                "Standardising templates (agendas, comms, checklists) so programs can be repeated reliably by other staff",
+                "Troubleshooting last-minute issues calmly (tech, room, logistics) to keep events running to time"
+            ],
+            "techStack": [
+                {
+                    "name": "Communication",
+                    "role": "Core Skill"
+                },
+                {
+                    "name": "Event Coordination",
+                    "role": "Planning"
+                },
+                {
+                    "name": "Stakeholder Management",
+                    "role": "Relationships"
+                },
+                {
+                    "name": "Microsoft Office",
+                    "role": "Documentation"
+                }
+            ],
+            "ratings": {
+                "complexity": "Mid",
+                "coffee": 2,
+                "documentation": 4,
+                "wouldBuildAgain": "Yes",
+                "duration": "Ongoing"
+            },
+            "metrics": [],
+            "caseStudy": {
+                "challenge": "Faculty programs involve coordination across multiple stakeholders with different priorities and communication styles.",
+                "solution": "Created standardized templates and checklists for program delivery. Established clear communication channels between all parties. Built in feedback loops for continuous improvement.",
+                "impact": "Programs run more smoothly with less last-minute chaos. Templates now used by other staff members for their events."
+            },
+            "links": {},
+            "screenshots": []
+        },
+        {
+            "id": "mash",
+            "slug": "mash",
+            "company": "Mash Staffing Australia",
+            "logo": "/images/logos/mash.svg",
+            "role": "Brand Ambassador",
+            "type": "Part-time",
+            "startDate": "Feb 2023",
+            "endDate": "May 2025",
+            "current": false,
+            "location": "Sydney, Australia",
+            "description": "Event staff for multiple brand activations",
+            "synopsis": "Worked casually as event staff for multiple brand activations, creating positive brand experiences for attendees.",
+            "tagline": "Brand Activation Events",
+            "genre": [
+                "Events",
+                "Customer Service",
+                "Marketing"
+            ],
+            "highlights": [
+                "Worked casually as event staff for multiple events",
+                "Responsible for engaging with consumers and creating a positive brand experience for attendees",
+                "Ensured smooth operations and the overall success of each event"
+            ],
+            "techStack": [
+                {
+                    "name": "Customer Service",
+                    "role": "Core Skill"
+                },
+                {
+                    "name": "Teamwork",
+                    "role": "Collaboration"
+                },
+                {
+                    "name": "Multitasking",
+                    "role": "Operations"
+                },
+                {
+                    "name": "Problem Solving",
+                    "role": "On-the-spot"
+                }
+            ],
+            "ratings": {
+                "complexity": "Entry",
+                "coffee": 1,
+                "documentation": 1,
+                "wouldBuildAgain": "Yes",
+                "duration": "2+ years"
+            },
+            "metrics": [],
+            "caseStudy": {
+                "challenge": "Brand activations require quick thinking and adaptability to create memorable experiences for diverse audiences.",
+                "solution": "Engaged authentically with attendees, adapted to different brand requirements, and ensured smooth event operations.",
+                "impact": "Successfully represented multiple brands at various events across Sydney."
+            },
+            "links": {},
+            "screenshots": []
+        },
+        {
+            "id": "actura",
+            "slug": "actura",
+            "company": "Actura",
+            "logo": "/images/logos/actura.svg",
+            "role": "Course Leader",
+            "type": "Part-time",
+            "startDate": "Feb 2024",
+            "endDate": "Jun 2024",
+            "current": false,
+            "location": "Sydney, Australia",
+            "description": "Teaching robotics to Year 8 students at Reddam House School",
+            "synopsis": "Delivered the Line Follower & Light Crawler Robot activities as part of the CASE FlipRobot Academy curriculum to Year 8 students.",
+            "tagline": "K-12 Robotics Education",
+            "genre": [
+                "Education",
+                "Robotics",
+                "STEM"
+            ],
+            "highlights": [
+                "Delivered Line Follower & Light Crawler Robot activities to Year 8 students at Reddam House School, Sydney",
+                "Part of the CASE FlipRobot Academy curriculum",
+                "Teaching robotics fundamentals and Arduino programming"
+            ],
+            "techStack": [
+                {
+                    "name": "Arduino",
+                    "role": "Hardware"
+                },
+                {
+                    "name": "Teaching",
+                    "role": "Core Skill"
+                },
+                {
+                    "name": "Education",
+                    "role": "Curriculum"
+                },
+                {
+                    "name": "Public Speaking",
+                    "role": "Delivery"
+                }
+            ],
+            "ratings": {
+                "complexity": "Entry",
+                "coffee": 1,
+                "documentation": 2,
+                "wouldBuildAgain": "Yes",
+                "duration": "5 months"
+            },
+            "metrics": [],
+            "caseStudy": {
+                "challenge": "Engaging young students with complex robotics concepts in an accessible and fun way.",
+                "solution": "Used hands-on activities with FlipRobot kits to make learning tangible. Built projects step-by-step with clear explanations.",
+                "impact": "Students successfully built and programmed their own robots by the end of the course."
+            },
+            "links": {},
+            "screenshots": []
         }
     ],
     "education": [

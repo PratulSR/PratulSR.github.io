@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import Badge from '@/components/ui/Badge';
 import SectionHeader from '@/components/ui/SectionHeader';
 import projectsDataRaw from '@/data/projects.json';
@@ -70,14 +71,14 @@ export default async function ProjectPage({ params }: Props) {
             <div className="flex flex-col md:flex-row gap-6 md:gap-8 mb-10">
                 {/* Poster */}
                 <div className="flex-shrink-0">
-                    <div className="w-48 h-72 bg-[#1F1F1F] rounded-lg flex items-center justify-center border border-[#2A2A2A]">
-                        <span className="text-6xl">
-                            {project.genre[0] === 'AI/ML' && '🤖'}
-                            {project.genre[0] === 'Cloud' && '☁️'}
-                            {project.genre[0] === 'Full-Stack' && '🔧'}
-                            {project.genre[0] === 'Leadership' && '👥'}
-                            {project.genre[0] === 'Serverless' && '⚡'}
-                        </span>
+                    <div className="relative w-48 h-72 bg-[#1F1F1F] rounded-lg overflow-hidden border border-[#2A2A2A]">
+                        <Image
+                            src={project.poster}
+                            alt={project.title}
+                            fill
+                            className="object-cover"
+                            priority
+                        />
                     </div>
                 </div>
 

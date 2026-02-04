@@ -1,6 +1,10 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import SectionHeader from '@/components/ui/SectionHeader';
 import projectsData from '@/data/projects.json';
+
+// Projects that should use company logos with centered/contain display
+const logoProjects = ['done-life', 'accenture-permissions', 'robotics-club'];
 
 export default function KnownFor() {
     const featuredProjects = projectsData.projects.filter(p => p.featured);
@@ -23,52 +27,65 @@ export default function KnownFor() {
             </SectionHeader>
 
             <div className="flex gap-4 overflow-x-auto pb-4 -mx-4 px-4 scrollbar-hide">
-                {featuredProjects.map((project) => (
-                    <Link
-                        key={project.slug}
-                        href={`/projects/${project.slug}`}
-                        className="group flex-shrink-0 w-40"
-                    >
-                        {/* Poster */}
-                        <div className="relative aspect-[2/3] bg-[#1F1F1F] rounded-lg overflow-hidden border border-[#2A2A2A] group-hover:border-[#F5C518]/50 transition-all mb-2">
-                            {/* Gradient overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10" />
+                {featuredProjects.map((project) => {
+                    const isLogo = logoProjects.includes(project.slug);
 
-                            {/* Project icon/placeholder */}
-                            <div className="absolute inset-0 flex items-center justify-center">
-                                <span className="text-4xl">
-                                    {project.genre[0] === 'AI/ML' && '🤖'}
-                                    {project.genre[0] === 'Cloud' && '☁️'}
-                                    {project.genre[0] === 'Full-Stack' && '🔧'}
-                                    {project.genre[0] === 'Leadership' && '👥'}
-                                    {project.genre[0] === 'Serverless' && '⚡'}
-                                </span>
+                    return (
+                        <Link
+                            key={project.slug}
+                            href={`/projects/${project.slug}`}
+                            className="group flex-shrink-0 w-40"
+                        >
+                            {/* Poster */}
+                            <div className={`relative aspect-[2/3] rounded-lg overflow-hidden border border-[#2A2A2A] group-hover:border-[#F5C518]/50 transition-all mb-2 ${isLogo ? 'bg-[#1A1A1A] flex items-center justify-center p-6' : 'bg-[#1F1F1F]'}`}>
+                                {/* Project Poster/Logo Image */}
+                                {isLogo ? (
+                                    <Image
+                                        src={project.poster}
+                                        alt={project.title}
+                                        width={100}
+                                        height={100}
+                                        className="w-full h-auto object-contain group-hover:scale-110 transition-transform duration-300"
+                                    />
+                                ) : (
+                                    <Image
+                                        src={project.poster}
+                                        alt={project.title}
+                                        fill
+                                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                    />
+                                )}
+
+                                {/* Gradient overlay - only for non-logo */}
+                                {!isLogo && (
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10" />
+                                )}
+
+                                {/* Year badge */}
+                                <div className="absolute top-2 right-2 z-20">
+                                    <span className="px-2 py-0.5 bg-[#F5C518] text-black text-xs font-bold rounded">
+                                        {project.year}
+                                    </span>
+                                </div>
+
+                                {/* Complexity badge */}
+                                <div className="absolute bottom-2 left-2 right-2 z-20">
+                                    <p className={`text-xs truncate ${isLogo ? 'text-[#AAAAAA]' : 'text-white/90'}`}>
+                                        {project.ratings.complexity} Level
+                                    </p>
+                                </div>
                             </div>
 
-                            {/* Year badge */}
-                            <div className="absolute top-2 right-2 z-20">
-                                <span className="px-2 py-0.5 bg-[#F5C518] text-black text-xs font-bold rounded">
-                                    {project.year}
-                                </span>
-                            </div>
-
-                            {/* Complexity badge */}
-                            <div className="absolute bottom-2 left-2 right-2 z-20">
-                                <p className="text-xs text-[#AAAAAA] truncate">
-                                    {project.ratings.complexity} Level
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Title */}
-                        <h3 className="text-sm font-medium text-white group-hover:text-[#F5C518] transition-colors line-clamp-2">
-                            {project.title}
-                        </h3>
-                        <p className="text-xs text-[#6B6B6B] mt-0.5 line-clamp-1">
-                            {project.tagline}
-                        </p>
-                    </Link>
-                ))}
+                            {/* Title */}
+                            <h3 className="text-sm font-medium text-white group-hover:text-[#F5C518] transition-colors line-clamp-2">
+                                {project.title}
+                            </h3>
+                            <p className="text-xs text-[#6B6B6B] mt-0.5 line-clamp-1">
+                                {project.tagline}
+                            </p>
+                        </Link>
+                    );
+                })}
             </div>
         </section>
     );

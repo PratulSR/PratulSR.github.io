@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Metadata } from 'next';
 import SectionHeader from '@/components/ui/SectionHeader';
 import Badge from '@/components/ui/Badge';
@@ -35,14 +36,13 @@ export default function ProjectsPage() {
                     >
                         <div className="flex gap-4">
                             {/* Poster */}
-                            <div className="flex-shrink-0 w-24 h-36 bg-[#1F1F1F] rounded-lg flex items-center justify-center border border-[#2A2A2A] group-hover:border-[#F5C518]/50 transition-colors">
-                                <span className="text-3xl">
-                                    {project.genre[0] === 'AI/ML' && '🤖'}
-                                    {project.genre[0] === 'Cloud' && '☁️'}
-                                    {project.genre[0] === 'Full-Stack' && '🔧'}
-                                    {project.genre[0] === 'Leadership' && '👥'}
-                                    {project.genre[0] === 'Serverless' && '⚡'}
-                                </span>
+                            <div className="relative flex-shrink-0 w-24 h-36 bg-[#1F1F1F] rounded-lg overflow-hidden border border-[#2A2A2A] group-hover:border-[#F5C518]/50 transition-colors">
+                                <Image
+                                    src={project.poster}
+                                    alt={project.title}
+                                    fill
+                                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                />
                             </div>
 
                             {/* Details */}

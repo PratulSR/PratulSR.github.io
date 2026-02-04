@@ -1,7 +1,7 @@
 {
     "name": "Pratul Singh Raghava",
     "title": "Software Engineer",
-    "tagline": "Cloud & AI Systems",
+    "tagline": "Loves ABCD - Anything Backend Cloud & Data",
     "location": "Sydney, Australia",
     "status": "Open to opportunities",
     "rating": {
@@ -71,7 +71,6 @@
         }
     ],
     "personalDetails": {
-        "born": "India",
         "basedIn": "Sydney, Australia",
         "education": "University of Sydney",
         "degree": "B.Eng (Hons) Software Engineering",
@@ -83,8 +82,7 @@
         ]
     },
     "social": {
-        "email": "pratulsr26@gmail.com",
-        "phone": "+61 481602870",
+        "email": "hire@hellopratul.com",
         "linkedin": "https://www.linkedin.com/in/pratulsinghraghava/",
         "github": "https://github.com/PratulSR"
     },

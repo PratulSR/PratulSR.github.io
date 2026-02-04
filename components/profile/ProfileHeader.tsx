@@ -2,7 +2,12 @@ import Image from 'next/image';
 import StarRating from '@/components/ui/StarRating';
 import profileData from '@/data/profile.json';
 
-export default function ProfileHeader() {
+interface ProfileHeaderProps {
+    onSecretTap?: () => void;
+    tapCount?: number;
+}
+
+export default function ProfileHeader({ onSecretTap, tapCount = 0 }: ProfileHeaderProps) {
     return (
         <div className="flex flex-col md:flex-row gap-6 md:gap-8">
             {/* Photo */}
@@ -50,14 +55,30 @@ export default function ProfileHeader() {
                     {profileData.tagline}
                 </p>
 
-                {/* Rating */}
-                <div className="mb-4">
+                {/* Rating - Secret tap zone for mobile */}
+                <div
+                    className="mb-4 cursor-pointer select-none"
+                    onClick={onSecretTap}
+                    title={tapCount >= 3 ? `${7 - tapCount} more taps...` : undefined}
+                >
                     <StarRating
                         score={profileData.rating.score}
                         count={profileData.rating.count}
                         source={profileData.rating.source}
                         size="lg"
                     />
+                    {/* Progress indicator - only show after 3 taps */}
+                    {tapCount >= 3 && (
+                        <div className="flex gap-1 mt-1">
+                            {[...Array(7)].map((_, i) => (
+                                <div
+                                    key={i}
+                                    className={`w-1 h-1 rounded-full transition-colors ${i < tapCount ? 'bg-[#F5C518]' : 'bg-[#2A2A2A]'
+                                        }`}
+                                />
+                            ))}
+                        </div>
+                    )}
                 </div>
 
                 {/* Status Badge */}

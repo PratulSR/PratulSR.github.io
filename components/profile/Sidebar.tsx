@@ -1,6 +1,12 @@
 import profileData from '@/data/profile.json';
 import projectsData from '@/data/projects.json';
 
+// Award links mapping
+const awardLinks: { [key: string]: string } = {
+    "Sydney International Student Award": "https://www.sydney.edu.au/study/fees-and-loans/scholarships/sydney-international-student-award.html",
+    "Engineering Sydney Industry Placement Scholarship": "https://www.sydney.edu.au/engineering/study/scholarships/engineering-sydney-industry-placement-scholarship.html"
+};
+
 export default function Sidebar() {
     return (
         <aside className="space-y-6">
@@ -11,10 +17,6 @@ export default function Sidebar() {
                 </h3>
 
                 <dl className="space-y-3 text-sm">
-                    <div>
-                        <dt className="text-[#6B6B6B]">Born</dt>
-                        <dd className="text-[#AAAAAA]">{profileData.personalDetails.born}</dd>
-                    </div>
                     <div>
                         <dt className="text-[#6B6B6B]">Based in</dt>
                         <dd className="text-[#AAAAAA]">{profileData.personalDetails.basedIn}</dd>
@@ -88,12 +90,26 @@ export default function Sidebar() {
                 </h3>
 
                 <ul className="space-y-2">
-                    {profileData.awards.map((award, index) => (
-                        <li key={index} className="flex items-start gap-2 text-sm">
-                            <span className="text-[#F5C518]">🏆</span>
-                            <span className="text-[#AAAAAA]">{award}</span>
-                        </li>
-                    ))}
+                    {profileData.awards.map((award, index) => {
+                        const link = awardLinks[award];
+                        return (
+                            <li key={index} className="flex items-start gap-2 text-sm">
+                                <span className="text-[#F5C518]">🏆</span>
+                                {link ? (
+                                    <a
+                                        href={link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-[#AAAAAA] hover:text-[#F5C518] transition-colors underline decoration-dotted underline-offset-2"
+                                    >
+                                        {award}
+                                    </a>
+                                ) : (
+                                    <span className="text-[#AAAAAA]">{award}</span>
+                                )}
+                            </li>
+                        );
+                    })}
                 </ul>
             </div>
 
@@ -137,8 +153,8 @@ export default function Sidebar() {
                     💡 Did You Know?
                 </h3>
                 <p className="text-sm text-[#AAAAAA] leading-relaxed">
-                    Pratul can name every country in the world in under 10 minutes.
-                    Challenge him if you dare!
+                    I can name every country in the world in under 10 minutes.
+                    Challenge me if you dare!
                 </p>
             </div>
         </aside>
