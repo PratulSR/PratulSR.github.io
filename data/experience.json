@@ -3,83 +3,96 @@
         {
             "id": "done-life",
             "slug": "done-life",
-            "company": "Done. Life",
+            "company": "Done Life",
             "logo": "/images/logos/done-life.svg",
-            "role": "Founding Engineer & Product Lead",
+            "role": "Software Engineer",
             "type": "Founding Role",
             "startDate": "Dec 2024",
             "endDate": "Present",
             "current": true,
             "location": "Sydney, Australia",
-            "description": "AI-first productivity platform automating 'Life Admin' workflows",
-            "synopsis": "Leading the end-to-end product lifecycle for an AI-first productivity platform that automates 'Life Admin' by converting unstructured emails, PDFs, and images into structured calendar events.",
-            "tagline": "Zero-to-One AI Startup",
+            "description": "Production Flutter app with AI email ingestion, field-level encryption, and cloud infrastructure as code",
+            "synopsis": "Leading full-cycle engineering for a production AI-first productivity platform. This spans backend AI pipelines and cloud infrastructure through to App Store compliance and CI/CD, converting unstructured emails, PDFs, and images into structured calendar events for consumers.",
+            "tagline": "Production-Grade AI Platform",
             "genre": [
                 "AI/ML",
                 "Mobile",
-                "Serverless"
+                "Cloud"
             ],
             "highlights": [
-                "Architected a serverless, event-driven backend to automate complex 'Life Admin' workflows for consumers",
-                "Engineered a custom traffic router that dynamically directs payloads between low-latency text models and high-compute vision models, reducing processing overhead by ~40% and response times by ~70%",
-                "Solved temporal hallucination issues in LLMs by injecting dynamic context anchors and Chain-of-Thought protocols",
-                "Led the end-to-end product lifecycle from Zero-to-One, managing full stack & navigating App Store compliance"
+                "Engineered an AI email ingestion pipeline using OpenAI Responses API with strict JSON schema, native PDF input, and timezone-aware date resolution via Luxon, fully eliminating the temporal hallucination issues that plagued earlier LLM extraction",
+                "Implemented AES-256-GCM field-level encryption with server-side DEK wrapping via GCP Secret Manager; built a serialized async queue to prevent iOS Keychain concurrency crashes caused by overlapping Riverpod providers",
+                "Provisioned GCP infrastructure as code with Terraform (8 .tf files covering Pub/Sub, IAM, Secret Manager, API services) and authored three GitHub Actions CI/CD workflows for PR validation (format, lint, test) and dev/prod Android AAB builds",
+                "Navigated an App Store Guideline 3.1.1 rejection and shipped a platform-split paywall: iOS uses App Store offer code redemption via RevenueCat; Android retains the approved in-app voucher flow",
+                "Built multi-auth (Email/Password, Sign in with Apple, Google Sign-In) with platform-specific routing, anonymous-to-linked account flows, and branded transactional email via Gmail API; scaled codebase from ~13,800 to ~21,900 Dart LOC across 40+ commits in under 3 months"
             ],
             "techStack": [
                 {
-                    "name": "AWS Lambda",
-                    "role": "Serverless Compute"
-                },
-                {
-                    "name": "OpenAI GPT-4o",
-                    "role": "AI Engine"
-                },
-                {
-                    "name": "OpenAI Vision",
-                    "role": "Image Processing"
-                },
-                {
-                    "name": "Make.com",
-                    "role": "Workflow Orchestration"
-                },
-                {
-                    "name": "Adalo",
+                    "name": "Flutter",
                     "role": "Mobile Frontend"
                 },
                 {
-                    "name": "DynamoDB",
-                    "role": "Database"
+                    "name": "Firebase / Cloud Functions",
+                    "role": "Backend & Database"
                 },
                 {
-                    "name": "IAPHUB",
-                    "role": "In-App Purchases"
+                    "name": "OpenAI Responses API",
+                    "role": "AI Extraction Engine"
+                },
+                {
+                    "name": "RevenueCat",
+                    "role": "Subscription Management"
+                },
+                {
+                    "name": "Terraform",
+                    "role": "Infrastructure as Code"
+                },
+                {
+                    "name": "GitHub Actions",
+                    "role": "CI/CD"
+                },
+                {
+                    "name": "GCP Secret Manager",
+                    "role": "Key Management"
+                },
+                {
+                    "name": "Firebase Analytics (GA4)",
+                    "role": "Product Analytics"
                 }
             ],
             "ratings": {
                 "complexity": "Principal",
                 "coffee": 5,
-                "documentation": 4,
+                "documentation": 5,
                 "wouldBuildAgain": "Absolutely",
-                "duration": "8 weeks (Zero-to-One)"
+                "duration": "Ongoing (5+ months)"
             },
             "metrics": [
                 {
-                    "label": "Processing Error Reduction",
-                    "value": "~40%"
+                    "label": "Dart LOC Growth",
+                    "value": "13,800 → 21,900"
                 },
                 {
-                    "label": "Non-actionable Attachment Filtering",
-                    "value": "90%"
+                    "label": "Cloud Functions Lines",
+                    "value": "1,200 → 2,600"
                 },
                 {
-                    "label": "Time to App Store",
-                    "value": "8 weeks"
+                    "label": "Commits (Mar – Apr)",
+                    "value": "40+"
+                },
+                {
+                    "label": "Terraform Files",
+                    "value": "8"
+                },
+                {
+                    "label": "CI/CD Workflows",
+                    "value": "3"
                 }
             ],
             "caseStudy": {
-                "challenge": "Users drown in 'Life Admin'—bills, appointments, event invites buried in emails. Manually copying dates to calendars is tedious and error-prone. The AI challenge: LLMs frequently 'hallucinated' dates, calculating relative dates from their training data cut-off instead of the current date.",
-                "solution": "Engineered a 'Context Anchor' injection system that dynamically injects the current ISO timestamp and day of week at inference time. Built a 'Split-Path Engine' to route traffic between low-latency text models and high-compute vision models based on payload analysis. Implemented aggressive 'Junk Filters' to discard non-actionable attachments (<5KB signatures/icons).",
-                "impact": "Completely solved the temporal hallucination issue. The 'Forward-to-Email' feature became the app's most-used ingress method. Reduced API costs by filtering 90% of junk attachments. Successfully launched on App Store within 8-week timeline."
+                "challenge": "Building a production-grade consumer app from scratch across three fronts simultaneously: (1) AI reliability: LLMs hallucinating dates, poor PDF handling, and prompt drift on real-world email shapes; (2) Platform compliance: an App Store Guideline 3.1.1 rejection requiring an iOS/Android product split; (3) Data security: sensitive item content needed field-level protection without breaking offline Flutter sync or triggering iOS Keychain concurrency crashes.",
+                "solution": "Migrated AI extraction to OpenAI Responses API with strict JSON schema and IANA timezone injection via Luxon, so relative dates resolve correctly in the user's wall-clock zone. Implemented AES-256-GCM field-level encryption with a GCP Secret Manager-wrapped DEK and a serialized async queue to eliminate Riverpod/Keychain race conditions. Split the paywall by platform, with iOS redeeming App Store offer codes and Android retaining the approved voucher flow. Provisioned all GCP resources with Terraform and wired three GitHub Actions workflows for repeatable, secret-safe builds.",
+                "impact": "App is production-ready on both App Store and Google Play. Field-level encryption protects all sensitive Firestore content without plaintext storage. The CI/CD pipeline enforces dart format, flutter analyze, and flutter test on every PR. Codebase grew ~58% in Dart LOC across 40+ commits in under 3 months, with full infrastructure expressed as versioned code."
             },
             "links": {},
             "screenshots": []
@@ -185,7 +198,7 @@
                 "Mentorship"
             ],
             "highlights": [
-                "Tutored 335+ students in machine learning and Python workflows for practical engineering use cases",
+                "Tutored 450+ students in machine learning and Python workflows for practical engineering use cases",
                 "Mentored students in applying AI/ML to real-world engineering datasets",
                 "Achieved 95% positive feedback from students across multiple semesters",
                 "Created inclusive classroom culture with 'no wrong questions' philosophy",
@@ -219,7 +232,7 @@
             "metrics": [
                 {
                     "label": "Students Taught",
-                    "value": "335+"
+                    "value": "450+"
                 },
                 {
                     "label": "Positive Feedback",

@@ -474,45 +474,56 @@
             "Event-Driven Design",
             "API Integration",
             "Prompt Engineering",
-            "CI/CD"
+            "CI/CD",
+            "Infrastructure as Code",
+            "App Store Compliance",
+            "Mobile Development"
         ],
         "cloud": [
+            "Firebase / Cloud Functions",
+            "GCP Secret Manager",
+            "GCP Pub/Sub",
+            "Terraform",
             "AWS Lambda",
             "AWS EventBridge",
             "AWS S3",
-            "AWS RDS",
             "AWS API Gateway",
             "AWS Step Functions",
-            "AWS DynamoDB",
             "Google Cloud Platform",
             "OAuth 2.0"
         ],
         "databases": [
+            "Firestore",
             "PostgreSQL",
             "MySQL",
-            "SQLite",
             "MongoDB",
             "DynamoDB"
         ],
         "languages": [
+            "Dart",
             "Java",
             "Python",
             "TypeScript",
             "JavaScript"
         ],
         "tools": [
-            "GitHub",
-            "Azure DevOps",
+            "Flutter",
+            "GitHub Actions",
+            "RevenueCat",
+            "Firebase Analytics (GA4)",
             "Docker",
+            "Azure DevOps",
             "Jira",
             "Agile/Scrum"
         ],
         "ai": [
-            "OpenAI API",
-            "GPT-4o",
-            "Vision API",
-            "Whisper",
-            "LLM Orchestration"
+            "OpenAI Responses API",
+            "Structured Outputs (JSON Schema)",
+            "LLM Orchestration",
+            "Prompt Engineering",
+            "Computer Vision",
+            "Google Cloud NLP",
+            "PyTorch"
         ]
     }
 }

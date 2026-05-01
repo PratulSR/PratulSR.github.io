@@ -62,7 +62,7 @@ export default function KnownFor() {
                                 )}
 
                                 {/* Year badge */}
-                                <div className="absolute top-2 right-2 z-20">
+                                <div className="absolute bottom-2 right-2 z-20">
                                     <span className="px-2 py-0.5 bg-[#F5C518] text-black text-xs font-bold rounded">
                                         {project.year}
                                     </span>

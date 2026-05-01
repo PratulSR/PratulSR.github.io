@@ -134,7 +134,7 @@ export default function Sidebar() {
                     </div>
                     <div className="p-3 bg-[#121212] rounded">
                         <div className="text-2xl font-bold text-[#F5C518]">
-                            335+
+                            450+
                         </div>
                         <div className="text-xs text-[#6B6B6B]">Students Taught</div>
                     </div>

@@ -32,7 +32,7 @@ const RESUME_ASCII = `
 ║   │   Serverless APIs | 80% automation | Event-driven architecture             │   ║
 ║   │                                                                              │   ║
 ║   │ > Casual Academic @ USYD                   Feb 2024 - Present              │   ║
-║   │   335+ students | ML & Python | 95% positive feedback                       │   ║
+║   │   450+ students | ML & Python | 95% positive feedback                       │   ║
 ║   └─────────────────────────────────────────────────────────────────────────────┘   ║
 ║                                                                                      ║
 ║   ┌─────────────────────────────────────────────────────────────────────────────┐   ║
