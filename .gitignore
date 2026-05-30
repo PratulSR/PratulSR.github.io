@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local private reference docs — job-application context, never commit (contains PII)
+master_context.md
+TECHNICAL_SUMMARY_PAST_MONTH.md
