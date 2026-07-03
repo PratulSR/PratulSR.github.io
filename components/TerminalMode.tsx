@@ -18,21 +18,24 @@ const RESUME_ASCII = `
 ║   ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚══════╝                                ║
 ║                                                                                      ║
 ║   ╔═════════════════════════════════════════════════════════════════════════════╗   ║
-║   ║  SOFTWARE ENGINEER | FOUNDING ENGINEER | LOVES ABCD                        ║   ║
+║   ║  SOFTWARE ENGINEER | PRODUCT LEAD | LOVES ABCD                             ║   ║
 ║   ║  (Anything Backend Cloud & Data)                                            ║   ║
 ║   ╚═════════════════════════════════════════════════════════════════════════════╝   ║
 ║                                                                                      ║
 ║   ┌─────────────────────────────────────────────────────────────────────────────┐   ║
 ║   │ EXPERIENCE                                                                   │   ║
 ║   ├─────────────────────────────────────────────────────────────────────────────┤   ║
-║   │ > Founding Engineer @ Done. Life           Dec 2024 - Present              │   ║
-║   │   AI-first productivity platform | Zero-to-One | App Store deployed        │   ║
-║   │                                                                              │   ║
+║   │ > Software Eng @ Nexivity                  May 2026 - Present              │   ║
+║   │   BackupMeraki SaaS | Cisco Meraki Backups | Sole Feature Engineer         │   ║
+║   │                                                                            │   ║
+║   │ > Software Eng & Product Lead @ Done Life  Dec 2025 - Present              │   ║
+║   │   AI-first productivity platform | Product + Eng | App Store deployed      │   ║
+║   │                                                                            │   ║
 ║   │ > Software Engineer @ Accenture            Jun 2024 - Dec 2024             │   ║
 ║   │   Serverless APIs | 80% automation | Event-driven architecture             │   ║
-║   │                                                                              │   ║
+║   │                                                                            │   ║
 ║   │ > Casual Academic @ USYD                   Feb 2024 - Present              │   ║
-║   │   450+ students | ML & Python | 95% positive feedback                       │   ║
+║   │   450+ students | ML & Python | 95% positive feedback                      │   ║
 ║   └─────────────────────────────────────────────────────────────────────────────┘   ║
 ║                                                                                      ║
 ║   ┌─────────────────────────────────────────────────────────────────────────────┐   ║
@@ -85,14 +88,15 @@ Tip: Type a command and press Enter
 ├──────────────────────────────────────────────────────────────┤
 │                                                               │
 │  Name:      Pratul Singh Raghava                             │
-│  Title:     Software Engineer                                │
+│  Title:     Software Engineer & Product Lead                 │
 │  Location:  Sydney, Australia                                │
 │  Status:    Open to opportunities                            │
 │                                                               │
 │  Tagline:   "Loves ABCD - Anything Backend Cloud & Data"     │
 │                                                               │
-│  Bio:       Founding Engineer who bridges complex backend    │
-│             logic and user-centric product delivery.         │
+│  Bio:       Ships production systems end-to-end AND owns     │
+│             the product calls that go with them - backend    │
+│             logic, cloud infra, and user-centric delivery.    │
 │             First Class Honours from USYD.                   │
 │                                                               │
 │  Fun Facts:                                                   │
@@ -130,23 +134,27 @@ Tip: Type a command and press Enter
 │                     Featured Projects                         │
 ├──────────────────────────────────────────────────────────────┤
 │                                                               │
-│  [1] Done. Life (2024)                                       │
-│      AI Productivity Platform | Founding Engineer            │
-│      "70% faster response time with Split-Path AI engine"    │
+│  [1] BackupMeraki @ Nexivity (2026)                          │
+│      Cisco Meraki Backup/Restore SaaS | Feature Engineer     │
+│      "Sole engineer shipping features across 8 repos"        │
 │                                                               │
-│  [2] Accenture Permissions Engine (2024)                     │
+│  [2] Done Life (2025)                                        │
+│      AI Productivity Platform | Software Eng & Product Lead  │
+│      "97% faster ingestion via Gmail push mailhooks"         │
+│                                                               │
+│  [3] Accenture Permissions Engine (2024)                     │
 │      Enterprise Security Automation | Software Engineer      │
 │      "80% reduction in manual provisioning"                  │
 │                                                               │
-│  [3] USYD Robotics Club (2022-2025)                         │
+│  [4] USYD Robotics Club (2022-2025)                         │
 │      Technical Community Leadership | President              │
 │      "Scaled from 230 to 1,800+ members"                     │
 │                                                               │
-│  [4] Scholar Score (2024)                                    │
+│  [5] Scholar Score (2024)                                    │
 │      Course Review Platform | Personal Project               │
 │      "Rate My Professor for USYD courses"                    │
 │                                                               │
-│  [5] Privacy Finance Tracker (2023)                          │
+│  [6] Privacy Finance Tracker (2023)                          │
 │      Full-Stack Application | Personal Project               │
 │      "Local-first expense tracking"                          │
 │                                                               │

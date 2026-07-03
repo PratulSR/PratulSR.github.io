@@ -1,30 +1,126 @@
 {
     "experience": [
         {
+            "id": "nexivity",
+            "slug": "nexivity",
+            "company": "Nexivity",
+            "logo": "/images/logos/nexivity.svg",
+            "role": "Software Engineer",
+            "type": "Part-time",
+            "startDate": "May 2026",
+            "endDate": "Present",
+            "current": true,
+            "location": "Sydney, Australia",
+            "description": "Sole feature engineer on BackupMeraki — AWS-native backup & restore for Cisco Meraki networks",
+            "synopsis": "Nexivity is a Sydney network-automation consultancy and Cisco Meraki partner whose mission is to put networks on autopilot. I am the only engineer actively shipping features on its flagship product, BackupMeraki — a SaaS platform that version-controls and restores Cisco Meraki network configurations, effectively disaster recovery for cloud-managed networks.",
+            "tagline": "Backup & Restore for Cloud Networks",
+            "genre": [
+                "Cloud",
+                "SaaS",
+                "Full-Stack"
+            ],
+            "highlights": [
+                "Sole feature developer on BackupMeraki, working fully full-stack across eight repositories — Python/AWS Lambda backend, the core backup/restore engine, Next.js/TypeScript dashboard, AWS infrastructure, four Lambda services, and Cisco Meraki and Stripe integrations",
+                "Built a custom asyncio token-bucket rate limiter with adaptive, jittered retry/backoff to stop backups silently losing data under Meraki's strict API rate limits, replacing blind pass/fail with an honest successful / partial / failed status model and per-run diagnostics",
+                "Shipped per-customer static, allowlistable egress IPs so security-conscious customers who restrict their networks to known source IPs get dependable backups",
+                "Eliminated network-level restore timeouts for large organisations, so customers with big Meraki orgs can reliably roll back a single network",
+                "Built a branded support portal with seamless single sign-on, so being logged in to BackupMeraki is enough to get help — no second account to manage",
+                "Designed server-side enforcement of subscription limits across organisations and per-organisation network caps"
+            ],
+            "techStack": [
+                {
+                    "name": "Next.js / TypeScript",
+                    "role": "Dashboard Frontend"
+                },
+                {
+                    "name": "Python / AWS Lambda",
+                    "role": "Backend & APIs"
+                },
+                {
+                    "name": "AWS ECS Fargate",
+                    "role": "Backup/Restore Jobs"
+                },
+                {
+                    "name": "Amazon DynamoDB",
+                    "role": "Primary Datastore"
+                },
+                {
+                    "name": "Amazon S3",
+                    "role": "Backup Artifacts"
+                },
+                {
+                    "name": "AWS Cognito",
+                    "role": "Auth & OIDC SSO"
+                },
+                {
+                    "name": "Stripe",
+                    "role": "Subscription Billing"
+                },
+                {
+                    "name": "Cisco Meraki API",
+                    "role": "Integration"
+                }
+            ],
+            "ratings": {
+                "complexity": "Senior",
+                "coffee": 4,
+                "documentation": 5,
+                "wouldBuildAgain": "Absolutely",
+                "duration": "Ongoing"
+            },
+            "metrics": [
+                {
+                    "label": "Repositories Owned",
+                    "value": "8"
+                },
+                {
+                    "label": "Cloud Region",
+                    "value": "ap-southeast-2"
+                },
+                {
+                    "label": "Product",
+                    "value": "BackupMeraki"
+                }
+            ],
+            "caseStudy": {
+                "challenge": "BackupMeraki captures an entire Cisco Meraki organisation's configuration through hundreds of rate-limited API calls and stores each run as a restorable version. Doing that dependably — within the API's strict rate limits, for very large organisations, and for customers who lock their networks to specific source IPs — is the core engineering challenge.",
+                "solution": "Strengthened the backup engine so rate-limited or failed calls are handled gracefully and every run is honestly classified as successful, partial, or failed with diagnostics attached. Added static, allowlistable egress IPs for IP-restricted customers, and removed restore timeouts for very large organisations.",
+                "impact": "Customers can trust that a successful backup is actually complete, restore reliably at any scale, and allowlist a single stable IP — on a live product that businesses depend on for network disaster recovery."
+            },
+            "links": {},
+            "screenshots": []
+        },
+        {
             "id": "done-life",
             "slug": "done-life",
             "company": "Done Life",
             "logo": "/images/logos/done-life.svg",
-            "role": "Software Engineer",
-            "type": "Founding Role",
-            "startDate": "Dec 2024",
+            "role": "Software Engineer & Product Lead",
+            "type": "Full-time",
+            "startDate": "Dec 2025",
             "endDate": "Present",
             "current": true,
             "location": "Sydney, Australia",
             "description": "Production Flutter app with AI email ingestion, field-level encryption, and cloud infrastructure as code",
-            "synopsis": "Leading full-cycle engineering for a production AI-first productivity platform. This spans backend AI pipelines and cloud infrastructure through to App Store compliance and CI/CD, converting unstructured emails, PDFs, and images into structured calendar events for consumers.",
+            "synopsis": "The entire technical team for a production AI-first productivity platform, and the bridge between the founder's product vision and technical reality. Owns full-cycle engineering — AI pipelines, cloud infrastructure, App Store compliance, CI/CD — and every product decision that goes with it, converting unstructured emails, PDFs, and images into structured calendar events for consumers.",
             "tagline": "Production-Grade AI Platform",
             "genre": [
                 "AI/ML",
                 "Mobile",
-                "Cloud"
+                "Cloud",
+                "Product"
             ],
             "highlights": [
+                "Made the app 97% faster for users by replacing blind 15-minute email polling with custom mailhooks (Gmail push notifications), cutting average processing time from 20 minutes to 40 seconds — entirely my own initiative",
+                "Cut cloud costs by 91% by building a junk filter that discards the ~90% of inbound attachment data (signature images, decorative graphics) that was useless noise before it ever reached the AI",
+                "Rebuilt the entire app from no-code to full-code one month into the role, using AI dev tools to ship a working prototype in a single day that already outperformed a year of prior Adalo/Make.com work",
                 "Engineered an AI email ingestion pipeline using OpenAI Responses API with strict JSON schema, native PDF input, and timezone-aware date resolution via Luxon, fully eliminating the temporal hallucination issues that plagued earlier LLM extraction",
                 "Implemented AES-256-GCM field-level encryption with server-side DEK wrapping via GCP Secret Manager; built a serialized async queue to prevent iOS Keychain concurrency crashes caused by overlapping Riverpod providers",
                 "Provisioned GCP infrastructure as code with Terraform (8 .tf files covering Pub/Sub, IAM, Secret Manager, API services) and authored three GitHub Actions CI/CD workflows for PR validation (format, lint, test) and dev/prod Android AAB builds",
                 "Navigated an App Store Guideline 3.1.1 rejection and shipped a platform-split paywall: iOS uses App Store offer code redemption via RevenueCat; Android retains the approved in-app voucher flow",
-                "Built multi-auth (Email/Password, Sign in with Apple, Google Sign-In) with platform-specific routing, anonymous-to-linked account flows, and branded transactional email via Gmail API; scaled codebase from ~13,800 to ~21,900 Dart LOC across 40+ commits in under 3 months"
+                "Built multi-auth (Email/Password, Sign in with Apple, Google Sign-In) with platform-specific routing, anonymous-to-linked account flows, and branded transactional email via Gmail API",
+                "Built an offline AI-extraction eval harness (immutable run records, deterministic scorer, multi-provider abstraction) so model and prompt changes never ship blind, then used it to run a real A/B on reasoning-effort levels — an evidence-based product call that cut p50 latency ~72% for a 3.4-point accuracy trade-off",
+                "Instrumented the AI pipeline end-to-end and read 14 days of production logs to pinpoint the OpenAI call as ~96% of total task time — turning \"the app feels slow\" into a precise, defensible engineering target"
             ],
             "techStack": [
                 {
@@ -65,20 +161,20 @@
                 "coffee": 5,
                 "documentation": 5,
                 "wouldBuildAgain": "Absolutely",
-                "duration": "Ongoing (5+ months)"
+                "duration": "Ongoing (7+ months)"
             },
             "metrics": [
                 {
-                    "label": "Dart LOC Growth",
-                    "value": "13,800 → 21,900"
+                    "label": "Dart Codebase",
+                    "value": "~31,900 LOC"
                 },
                 {
-                    "label": "Cloud Functions Lines",
-                    "value": "1,200 → 2,600"
+                    "label": "Cloud Functions",
+                    "value": "~3,050 LOC / 12 fns"
                 },
                 {
-                    "label": "Commits (Mar – Apr)",
-                    "value": "40+"
+                    "label": "App Version",
+                    "value": "v1.0.0 → v1.0.6"
                 },
                 {
                     "label": "Terraform Files",
@@ -92,7 +188,7 @@
             "caseStudy": {
                 "challenge": "Building a production-grade consumer app from scratch across three fronts simultaneously: (1) AI reliability: LLMs hallucinating dates, poor PDF handling, and prompt drift on real-world email shapes; (2) Platform compliance: an App Store Guideline 3.1.1 rejection requiring an iOS/Android product split; (3) Data security: sensitive item content needed field-level protection without breaking offline Flutter sync or triggering iOS Keychain concurrency crashes.",
                 "solution": "Migrated AI extraction to OpenAI Responses API with strict JSON schema and IANA timezone injection via Luxon, so relative dates resolve correctly in the user's wall-clock zone. Implemented AES-256-GCM field-level encryption with a GCP Secret Manager-wrapped DEK and a serialized async queue to eliminate Riverpod/Keychain race conditions. Split the paywall by platform, with iOS redeeming App Store offer codes and Android retaining the approved voucher flow. Provisioned all GCP resources with Terraform and wired three GitHub Actions workflows for repeatable, secret-safe builds.",
-                "impact": "App is production-ready on both App Store and Google Play. Field-level encryption protects all sensitive Firestore content without plaintext storage. The CI/CD pipeline enforces dart format, flutter analyze, and flutter test on every PR. Codebase grew ~58% in Dart LOC across 40+ commits in under 3 months, with full infrastructure expressed as versioned code."
+                "impact": "App is production-ready on both App Store and Google Play. Field-level encryption protects all sensitive Firestore content without plaintext storage. The CI/CD pipeline enforces dart format, flutter analyze, and flutter test on every PR, with full infrastructure expressed as versioned code. The offline eval harness turned model and prompt changes from a leap of faith into a measured, data-driven product decision."
             },
             "links": {},
             "screenshots": []
@@ -102,14 +198,14 @@
             "slug": "accenture",
             "company": "Accenture",
             "logo": "/images/logos/accenture.svg",
-            "role": "Software Engineer",
-            "type": "Full-time",
+            "role": "Software Engineering Intern",
+            "type": "Internship",
             "startDate": "Jun 2024",
             "endDate": "Dec 2024",
             "current": false,
             "location": "Sydney, Australia",
-            "description": "Central Monitoring Team - Serverless infrastructure & automation",
-            "synopsis": "Worked on the Central Monitoring Team building serverless infrastructure and automation for enterprise-scale OpenSearch deployments.",
+            "description": "GenWizard · Automatic Ticket Resolver — Central Monitoring team",
+            "synopsis": "Interned in Accenture's GenWizard division on the Automatic Ticket Resolver (ATR) platform's Central Monitoring team, building serverless infrastructure and automation for enterprise-scale OpenSearch permissioning.",
             "tagline": "Enterprise Security Automation",
             "genre": [
                 "Cloud",
@@ -121,6 +217,8 @@
                 "Built event-driven workflows with EventBridge + Step Functions, mirroring stream-processing systems",
                 "Automated infrastructure provisioning with CloudFormation (IaC), reducing manual setup by 80%",
                 "Discovered and patched a security misconfiguration that also existed in Production—turned a deployment mistake into a security hardening win",
+                "Saved the team 15+ hours of manual work every month by automating additional repetitive tasks with AWS Lambda",
+                "Ensured 100% uptime by fixing and improving internal monitoring tools and real-time client dashboards",
                 "Delivered features in a fully agile scrum team, contributing to sprint planning, reviews, and retrospectives"
             ],
             "techStack": [
@@ -307,7 +405,7 @@
                     "endDate": "Aug 2025"
                 },
                 {
-                    "title": "Workshop Coordinator",
+                    "title": "Technical Director",
                     "startDate": "Sep 2022",
                     "endDate": "Aug 2023"
                 }
@@ -317,8 +415,8 @@
             "endDate": "Aug 2025",
             "current": false,
             "location": "Sydney, Australia",
-            "description": "Led Australia's largest university robotics club",
-            "synopsis": "Grew from Workshop Coordinator to President of Australia's largest university robotics club, scaling from 230 to 1,800+ members.",
+            "description": "Led the University of Sydney's second-largest student club",
+            "synopsis": "Grew from Technical Director to President of the University of Sydney's second-largest student club, scaling from 230 to 1,800+ members.",
             "tagline": "Scaling a Technical Community",
             "genre": [
                 "Leadership",
@@ -401,13 +499,13 @@
             "roles": [
                 {
                     "title": "General Volunteer",
-                    "startDate": "May 2022",
-                    "endDate": "Nov 2023"
+                    "startDate": "Apr 2022",
+                    "endDate": "Jun 2024"
                 }
             ],
             "type": "Volunteer",
-            "startDate": "May 2022",
-            "endDate": "Nov 2023",
+            "startDate": "Apr 2022",
+            "endDate": "Jun 2024",
             "current": false,
             "location": "Sydney, Australia",
             "description": "Promoting Engineering as an exciting career to K-12 students",
@@ -446,9 +544,13 @@
                 "coffee": 2,
                 "documentation": 3,
                 "wouldBuildAgain": "Absolutely",
-                "duration": "18 months"
+                "duration": "2+ years"
             },
             "metrics": [
+                {
+                    "label": "Students Reached",
+                    "value": "2,000"
+                },
                 {
                     "label": "Volunteer Hours",
                     "value": "100+"
@@ -488,6 +590,7 @@
                 "Coordination"
             ],
             "highlights": [
+                "Represented the Faculty of Engineering at school outreaches and open days, delivering hands-on engineering workshops to 1,500+ students from Years 5–12 across Sydney and regional NSW",
                 "Liaising between students, academic staff & external partners to coordinate workshops and program events",
                 "Managing communications, schedules & resources, producing briefings & slide decks for diverse audiences",
                 "Driving continuous improvement through participant feedback & translating it into practical program changes",
@@ -519,7 +622,12 @@
                 "wouldBuildAgain": "Yes",
                 "duration": "Ongoing"
             },
-            "metrics": [],
+            "metrics": [
+                {
+                    "label": "Students Reached",
+                    "value": "1,500+"
+                }
+            ],
             "caseStudy": {
                 "challenge": "Faculty programs involve coordination across multiple stakeholders with different priorities and communication styles.",
                 "solution": "Created standardized templates and checklists for program delivery. Established clear communication channels between all parties. Built in feedback loops for continuous improvement.",
@@ -651,14 +759,14 @@
             "degree": "Bachelor of Engineering Honours",
             "field": "Software Engineering",
             "startDate": "Aug 2021",
-            "endDate": "Jul 2025",
+            "endDate": "Oct 2025",
             "honours": "First Class Honours",
             "wam": 76.8,
             "honoursWam": 79.2,
             "highlights": [
+                "Intelligent Video Signal Understanding: 91 (High Distinction)",
                 "Cloud Computing: 88 (High Distinction)",
-                "Full Stack Development: 86 (High Distinction)",
-                "Scalable Data Management: 77 (Distinction)"
+                "Full Stack Development: 86 (High Distinction)"
             ],
             "awards": [
                 "Sydney International Student Award",

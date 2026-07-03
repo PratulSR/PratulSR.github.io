@@ -214,7 +214,7 @@ export default function SearchDropdown({
                 <div className="p-4">
                     <p className="text-sm text-[#6B6B6B] mb-3">Try searching for:</p>
                     <div className="flex flex-wrap gap-2">
-                        {['Done. Life', 'AWS', 'Python', 'Accenture'].map((suggestion) => (
+                        {['Nexivity', 'Done Life', 'AWS', 'Python'].map((suggestion) => (
                             <button
                                 key={suggestion}
                                 onClick={() => onSearchChange(suggestion)}

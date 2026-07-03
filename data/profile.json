@@ -1,6 +1,6 @@
 {
     "name": "Pratul Singh Raghava",
-    "title": "Software Engineer",
+    "title": "Software Engineer & Product Lead",
     "tagline": "Loves ABCD - Anything Backend Cloud & Data",
     "location": "Sydney, Australia",
     "status": "Open to opportunities",
@@ -11,21 +11,21 @@
     },
     "photo": "/images/headshot.png",
     "bio": {
-        "short": "Software Engineer (First Class Honours, USYD) who builds production-grade systems end to end, from AI pipelines and cloud infrastructure to App Store deployment.",
-        "full": "I am a Software Engineer (First Class Honours, USYD) who builds production-grade systems end to end. I lead engineering for Done Life, an AI-first productivity platform, owning the full lifecycle from cloud infrastructure and AI pipelines through to App Store compliance and CI/CD.\n\nMy technical foundation spans field-level AES-256-GCM encryption, Terraform-provisioned GCP infrastructure, OpenAI Responses API with strict JSON schema and timezone-aware extraction, and GitHub Actions CI/CD pipelines. At Accenture I acted as a force multiplier, automating security provisioning workflows and cutting manual effort by 80%. Beyond code, I led the USYD Robotics Club from 230 to 1,800+ members as President, and I excel at translating ambiguous requirements into shipped software across compliance, data modelling, and product roadmaps."
+        "short": "Software Engineer & Product Lead (First Class Honours, USYD) who builds production-grade systems end to end - and owns the product decisions that go with them, from AI pipelines and cloud infrastructure to App Store deployment and monetisation design.",
+        "full": "I am a Software Engineer & Product Lead (First Class Honours, USYD) who builds production-grade systems end to end. I lead engineering and product for Done Life, an AI-first productivity platform, owning the full lifecycle from cloud infrastructure and AI pipelines through to monetisation, App Store compliance, and CI/CD - and I'm the sole feature engineer shipping BackupMeraki, a Cisco Meraki backup/restore SaaS platform, at Nexivity.\n\nBeing the entire technical team at Done Life means every product call passes through me too: I've scrapped a year of no-code tooling for a working prototype built in a day, designed the subscription and entitlement system end to end, and built an offline AI-eval harness to A/B test model trade-offs on data instead of instinct - the kind of decision that sits right at the intersection of engineering and product.\n\nMy technical foundation spans field-level AES-256-GCM encryption, Terraform-provisioned GCP and AWS infrastructure, OpenAI Responses API with strict JSON schema and timezone-aware extraction, and GitHub Actions CI/CD pipelines. At Accenture I acted as a force multiplier, automating security provisioning workflows and cutting manual effort by 80%. Beyond code, I led the USYD Robotics Club from 230 to 1,800+ members as President, and I excel at translating ambiguous requirements into shipped software across compliance, data modelling, and product roadmaps."
     },
     "coreThemes": [
         {
-            "title": "Build-Run-Own Mindset",
-            "description": "I don't just write code; I architect the solution, manage the cloud operations, and handle the compliance (from GDPR to App Store verification)."
+            "title": "Build-Run-Own-Decide",
+            "description": "I don't just write code; I architect the solution, manage the cloud operations, handle the compliance (GDPR to App Store verification), and make the product calls that decide what gets built next."
         },
         {
             "title": "AI & Scalability",
-            "description": "I build systems that handle complexity—from scaling database permissions at Accenture to designing 'Split-Path' AI engines that optimize cost and latency."
+            "description": "I build systems that handle complexity—from scaling database permissions at Accenture to running data-driven trade-off analysis (an offline eval harness, A/B'd reasoning-effort levels) before shipping AI changes."
         },
         {
             "title": "Clarity",
-            "description": "I excel at translating technical trade-offs for non-technical stakeholders (clients, students, leadership)."
+            "description": "I excel at translating technical trade-offs for non-technical stakeholders (founders, clients, students, leadership)."
         }
     ],
     "trivia": [

@@ -7,7 +7,7 @@ import experienceData from '@/data/experience.json';
 
 export const metadata: Metadata = {
     title: 'Professional Journey | PRDb - Pratul Singh Raghava',
-    description: 'Full work history and professional journey of Pratul Singh Raghava. Software Engineer, Founding Engineer, and Technical Leader.',
+    description: 'Full work history and professional journey of Pratul Singh Raghava. Software Engineer, Product Lead, and Technical Leader.',
 };
 
 // Helper component for experience cards
