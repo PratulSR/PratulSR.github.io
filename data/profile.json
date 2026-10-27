@@ -9,7 +9,7 @@
         "count": 127,
         "source": "Based on LinkedIn endorsements & peer reviews"
     },
-    "photo": "/images/headshot.png",
+    "photo": "/images/headshot-2026.png",
     "bio": {
         "short": "Software engineer (First Class Honours, USYD) who builds products end to end, and the relationships around them. I engineer BackupMeraki at Nexivity, shipped a production app as its sole engineer, and have taught machine learning to 530+ engineering students.",
         "full": "I'm a software engineer who builds things end to end, and I do my best work when the people I'm building for are in the room.\n\nRight now I'm the engineer on BackupMeraki at Nexivity: a SaaS on AWS that backs up, restores and compares Cisco Meraki network configurations, effectively version control and disaster recovery for cloud-managed networks. I work directly with the founder, taking each piece of work from a design doc to shipped code across eight repositories.\n\nBefore that I was the sole engineer at Done Life, an AI-first life-admin app. One month in, I made the call to scrap a year of no-code tooling and built a working prototype in a single day that outperformed it. From there I took the app from a scaffold to production on iOS and Android, with an AI email pipeline, per-user encryption, subscription billing, Terraform infrastructure and CI/CD.\n\nThe other half of my story is people. I've taught machine learning to 530+ engineering students at the University of Sydney, most of whom arrived having never written code, and I learn every student's name. As President of the USYD Robotics Club I grew it from 230 members to 1,800, the second-largest club on campus, with one motto: \"we have to be better, not bigger.\""
