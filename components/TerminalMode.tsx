@@ -25,17 +25,17 @@ const RESUME_ASCII = `
 ║   ┌─────────────────────────────────────────────────────────────────────────────┐   ║
 ║   │ EXPERIENCE                                                                   │   ║
 ║   ├─────────────────────────────────────────────────────────────────────────────┤   ║
-║   │ > Software Eng @ Nexivity                  May 2026 - Present              │   ║
-║   │   BackupMeraki SaaS | Cisco Meraki Backups | Sole Feature Engineer         │   ║
+║   │ > Full Stack Eng @ Nexivity                May 2026 - Present              │   ║
+║   │   BackupMeraki SaaS | Backup, Restore & Compare | 8 repos                  │   ║
 ║   │                                                                            │   ║
-║   │ > Software Eng & Product Lead @ Done Life  Dec 2025 - Present              │   ║
+║   │ > Software Eng & Product Lead @ Done Life  Dec 2025 - Aug 2026             │   ║
 ║   │   AI-first productivity platform | Product + Eng | App Store deployed      │   ║
 ║   │                                                                            │   ║
-║   │ > Software Engineer @ Accenture            Jun 2024 - Dec 2024             │   ║
+║   │ > SWE Intern @ Accenture                   Jun 2024 - Dec 2024             │   ║
 ║   │   Serverless APIs | 80% automation | Event-driven architecture             │   ║
 ║   │                                                                            │   ║
 ║   │ > Casual Academic @ USYD                   Feb 2024 - Present              │   ║
-║   │   450+ students | ML & Python | 95% positive feedback                      │   ║
+║   │   530+ students | ML & Python | 95% positive feedback                      │   ║
 ║   └─────────────────────────────────────────────────────────────────────────────┘   ║
 ║                                                                                      ║
 ║   ┌─────────────────────────────────────────────────────────────────────────────┐   ║
@@ -88,7 +88,7 @@ Tip: Type a command and press Enter
 ├──────────────────────────────────────────────────────────────┤
 │                                                               │
 │  Name:      Pratul Singh Raghava                             │
-│  Title:     Software Engineer & Product Lead                 │
+│  Title:     Software Engineer                                │
 │  Location:  Sydney, Australia                                │
 │  Status:    Open to opportunities                            │
 │                                                               │
@@ -135,15 +135,15 @@ Tip: Type a command and press Enter
 ├──────────────────────────────────────────────────────────────┤
 │                                                               │
 │  [1] BackupMeraki @ Nexivity (2026)                          │
-│      Cisco Meraki Backup/Restore SaaS | Feature Engineer     │
-│      "Sole engineer shipping features across 8 repos"        │
+│      Cisco Meraki Backup/Restore SaaS | Full Stack Eng       │
+│      "Shipping across 8 repos, design doc first"             │
 │                                                               │
 │  [2] Done Life (2025)                                        │
 │      AI Productivity Platform | Software Eng & Product Lead  │
 │      "97% faster ingestion via Gmail push mailhooks"         │
 │                                                               │
 │  [3] Accenture Permissions Engine (2024)                     │
-│      Enterprise Security Automation | Software Engineer      │
+│      Enterprise Security Automation | SWE Intern             │
 │      "80% reduction in manual provisioning"                  │
 │                                                               │
 │  [4] USYD Robotics Club (2022-2025)                         │

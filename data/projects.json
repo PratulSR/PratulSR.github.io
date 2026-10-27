@@ -4,7 +4,7 @@
             "slug": "honours-thesis",
             "title": "Precision Irrigation with Federated Learning",
             "tagline": "Privacy-Preserving Agriculture AI",
-            "year": 2025,
+            "year": 2024,
             "featured": true,
             "poster": "/images/projects/thesis.svg",
             "synopsis": "Honours thesis combining decentralised AI with edge computing for sustainable agriculture. Developed a federated learning framework on Raspberry Pi devices to predict irrigation needs while preserving farmer data privacy.",
@@ -15,8 +15,8 @@
             ],
             "techStack": [
                 {
-                    "name": "PyTorch",
-                    "role": "ML Framework"
+                    "name": "NumPy / Pandas",
+                    "role": "Data & Modelling"
                 },
                 {
                     "name": "Raspberry Pi",
@@ -58,8 +58,8 @@
             ],
             "caseStudy": {
                 "challenge": "Agriculture accounts for 70% of global freshwater consumption, yet 40% is wasted. Farmers hesitate to share sensitive crop data with central servers, and rural areas lack reliable internet for cloud-based AI.",
-                "solution": "Built a custom Federated Learning framework from scratch. Used Raspberry Pi devices as edge nodes running MLP networks in PyTorch. Only anonymous model updates transmitted via SSH, keeping raw data local. Tested on Autonomous Greenhouse Challenge data for tomato production.",
-                "impact": "Achieved R² of 0.6-0.7 for irrigation prediction, close to centralised baseline of 0.7-0.8, while guaranteeing 100% data privacy. Published findings with industry partner Accenture."
+                "solution": "Built a custom Federated Learning framework from scratch. Used Raspberry Pi devices as edge nodes running multi-layer perceptron (MLP) networks, with FedAvg aggregation written from scratch. Only anonymous model updates transmitted via SSH, keeping raw data local. Tested on Autonomous Greenhouse Challenge data for tomato production.",
+                "impact": "Achieved R² of 0.6-0.7 for irrigation prediction, close to centralised baseline of 0.7-0.8, while guaranteeing 100% data privacy. Co-supervised by Accenture through an industry placement scholarship, and awarded First Class Honours."
             },
             "links": {
                 "github": null,
@@ -193,10 +193,10 @@
             "slug": "tomato-leaf-detection",
             "title": "Tomato Leaf Disease Detection",
             "tagline": "AI-Powered Crop Health Monitoring",
-            "year": 2024,
+            "year": 2025,
             "featured": true,
             "poster": "/images/projects/tomato-detection.svg",
-            "synopsis": "Custom YOLO-11M object detection model for automated identification of 7 distinct tomato leaf diseases. Implemented Fourier-based regularization for sharper disease localization.",
+            "synopsis": "Group project: a custom YOLO11m detector, trained from scratch with no COCO pretraining, that finds and localises 7 tomato leaf disease classes. A Fourier-based loss keeps the fine lesion edges the network would otherwise blur away.",
             "genre": [
                 "AI/ML",
                 "Computer Vision",
@@ -225,16 +225,16 @@
                 "coffee": 4,
                 "documentation": 4,
                 "wouldBuildAgain": "Absolutely",
-                "duration": "8 weeks"
+                "duration": "Apr–May 2025"
             },
             "metrics": [
                 {
-                    "label": "Precision",
-                    "value": "78.16%"
+                    "label": "mAP@50",
+                    "value": "83.3%"
                 },
                 {
-                    "label": "mAP@50",
-                    "value": "83.28%"
+                    "label": "Box Precision",
+                    "value": "75.8%"
                 },
                 {
                     "label": "Inference Speed",
@@ -242,12 +242,12 @@
                 }
             ],
             "caseStudy": {
-                "challenge": "Manual crop inspection is time-consuming and error-prone. Need to identify 7 distinct leaf states including Bacterial Spot, Early Blight, and Late Blight with precise localization.",
-                "solution": "Built custom YOLO-11M architecture with C2f Fusion Blocks (25% parameter reduction), SPPF for multi-scale pooling, and Polarized Self-Attention. Innovated with Fourier Loss term using 2D FFT to preserve high-frequency edge details.",
-                "impact": "Fourier-enhanced model improved Box Precision by 2.4% and mAP@50 by 2.4% over baseline with zero inference overhead. Model focuses on disease textures rather than being distracted by shadows or dirt."
+                "challenge": "Detect and localise lesions across 7 disease classes from ~600 annotated images, without using an off-the-shelf pretrained detector, while staying light enough to run on simple hardware in the field.",
+                "solution": "Built a custom YOLO11m from scratch: two-conv C2f fusion blocks replacing three-conv blocks, SPPF for multi-scale context, and polarized self-attention before the detection head. Added a Fourier-domain loss that compares the high-frequency spectrum of each lesion with the backbone's features, penalising the network for losing edges.",
+                "impact": "36% fewer parameters (28.2M vs ~44M) and ~27% faster inference than off-the-shelf YOLO11m with no accuracy loss. The Fourier loss lifted mAP@50 from 80.9% to 83.3% and F1 from 0.709 to 0.735, at zero inference cost."
             },
             "links": {
-                "github": null
+                "github": "https://github.com/PratulSR/Tomato-Leaf-Disease-Detection"
             },
             "screenshots": []
         },
@@ -406,7 +406,7 @@
                 "coffee": 2,
                 "documentation": 3,
                 "wouldBuildAgain": "Yes",
-                "duration": "1 week"
+                "duration": "1 weekend"
             },
             "metrics": [
                 {
@@ -415,9 +415,9 @@
                 }
             ],
             "caseStudy": {
-                "challenge": "Mission-critical legacy ATAR calculation tool was failing due to OS-compatibility issues during high-stakes admissions periods.",
-                "solution": "Conducted stakeholder interviews to understand requirements and constraints. Used Docker to containerize the tool into a portable image that could run consistently across different operating systems.",
-                "impact": "Provided 'heroic' relief to non-technical staff, ensuring operational continuity during critical admissions periods."
+                "challenge": "One Friday afternoon at peak admissions season, the faculty's ATAR calculator broke. The admissions team needed it working by Monday morning or the admissions process would be delayed.",
+                "solution": "Took on a codebase I'd never seen, diagnosed broken dependencies and missing cross-platform support, and containerised the tool with Docker so it runs the same on any machine.",
+                "impact": "Delivered by Monday morning, and admissions ran on time."
             },
             "links": {},
             "screenshots": []

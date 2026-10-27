@@ -5,14 +5,14 @@
             "slug": "nexivity",
             "company": "Nexivity",
             "logo": "/images/logos/nexivity.svg",
-            "role": "Software Engineer",
+            "role": "Full Stack Software Engineer",
             "type": "Part-time",
             "startDate": "May 2026",
             "endDate": "Present",
             "current": true,
             "location": "Sydney, Australia",
-            "description": "Sole feature engineer on BackupMeraki — AWS-native backup & restore for Cisco Meraki networks",
-            "synopsis": "Nexivity is a Sydney network-automation consultancy and Cisco Meraki partner whose mission is to put networks on autopilot. I am the only engineer actively shipping features on its flagship product, BackupMeraki — a SaaS platform that version-controls and restores Cisco Meraki network configurations, effectively disaster recovery for cloud-managed networks.",
+            "description": "Engineer on BackupMeraki: backup, restore and comparison for Cisco Meraki networks on AWS",
+            "synopsis": "Nexivity is a Sydney network-automation consultancy and Cisco Meraki partner. I'm the engineer on its SaaS product, BackupMeraki, working directly with the founder. BackupMeraki backs up, restores and compares the configuration of cloud-managed Cisco Meraki networks, effectively version control and disaster recovery for networks. I take each piece of work from a scope or design doc through to shipped code across eight repositories.",
             "tagline": "Backup & Restore for Cloud Networks",
             "genre": [
                 "Cloud",
@@ -20,12 +20,13 @@
                 "Full-Stack"
             ],
             "highlights": [
-                "Sole feature developer on BackupMeraki, working fully full-stack across eight repositories — Python/AWS Lambda backend, the core backup/restore engine, Next.js/TypeScript dashboard, AWS infrastructure, four Lambda services, and Cisco Meraki and Stripe integrations",
-                "Built a custom asyncio token-bucket rate limiter with adaptive, jittered retry/backoff to stop backups silently losing data under Meraki's strict API rate limits, replacing blind pass/fail with an honest successful / partial / failed status model and per-run diagnostics",
-                "Shipped per-customer static, allowlistable egress IPs so security-conscious customers who restrict their networks to known source IPs get dependable backups",
-                "Eliminated network-level restore timeouts for large organisations, so customers with big Meraki orgs can reliably roll back a single network",
-                "Built a branded support portal with seamless single sign-on, so being logged in to BackupMeraki is enough to get help — no second account to manage",
-                "Designed server-side enforcement of subscription limits across organisations and per-organisation network caps"
+                "Fixed backups of large networks that were losing data under Cisco's API rate limits, by reading the SDK's source to find the regression, measuring the old system's real behaviour, and restoring it with a single concurrency gate",
+                "Rebuilt the report customers see after a restore so it shows at a glance what was restored, what was already correct and what failed, with every outcome path traced in code and verified by live restores",
+                "Designed per-organisation licensing across seven repositories: DynamoDB data model, Stripe-driven plan changes and a daily compliance job",
+                "Gave customers with strict firewalls a fixed outbound IP to allowlist, using per-customer NAT gateways and Elastic IPs on ECS Fargate. Designed in my first week, with no networking background",
+                "Chose and launched the customer support portal and knowledge base, with single sign-on through Cognito so customers never need a second login",
+                "Audited the dashboard screen by screen with automated browser sweeps, then cleaned it up, proving each change safe with before/after screenshot comparisons",
+                "Run AI-assisted development as a discipline: design doc first, one reviewed AI session per plan item, and house-style rules so AI-written code reads like the rest of the codebase. I own every design decision, review and commit"
             ],
             "techStack": [
                 {
@@ -59,6 +60,10 @@
                 {
                     "name": "Cisco Meraki API",
                     "role": "Integration"
+                },
+                {
+                    "name": "Playwright",
+                    "role": "UI Audits & Regression Checks"
                 }
             ],
             "ratings": {
@@ -66,26 +71,26 @@
                 "coffee": 4,
                 "documentation": 5,
                 "wouldBuildAgain": "Absolutely",
-                "duration": "Ongoing"
+                "duration": "Ongoing (6 months)"
             },
             "metrics": [
                 {
-                    "label": "Repositories Owned",
+                    "label": "Repositories",
                     "value": "8"
                 },
                 {
-                    "label": "Cloud Region",
-                    "value": "ap-southeast-2"
+                    "label": "Commits (May–Oct 2026)",
+                    "value": "261"
                 },
                 {
-                    "label": "Product",
-                    "value": "BackupMeraki"
+                    "label": "Tickets Shipped or Scoped",
+                    "value": "32"
                 }
             ],
             "caseStudy": {
-                "challenge": "BackupMeraki captures an entire Cisco Meraki organisation's configuration through hundreds of rate-limited API calls and stores each run as a restorable version. Doing that dependably — within the API's strict rate limits, for very large organisations, and for customers who lock their networks to specific source IPs — is the core engineering challenge.",
-                "solution": "Strengthened the backup engine so rate-limited or failed calls are handled gracefully and every run is honestly classified as successful, partial, or failed with diagnostics attached. Added static, allowlistable egress IPs for IP-restricted customers, and removed restore timeouts for very large organisations.",
-                "impact": "Customers can trust that a successful backup is actually complete, restore reliably at any scale, and allowlist a single stable IP — on a live product that businesses depend on for network disaster recovery."
+                "challenge": "BackupMeraki captures an entire Cisco Meraki organisation's configuration through hundreds of rate-limited API calls, stores each run as a restorable version, and has to tell customers honestly what a restore actually did. I joined with no networking background, as the company's only engineer besides the founder.",
+                "solution": "Work runs design-doc first: investigate, agree the scope with the founder, then build across whichever of the eight repositories it touches. When a Cisco SDK upgrade broke large backups, I read the SDK's source, measured how the old system really behaved, and restored it with a single concurrency gate. I rebuilt the restore report by tracing every outcome path in code, and I direct AI coding agents one reviewed plan item at a time.",
+                "impact": "Large-network backups complete cleanly again, customers get a restore report that tells the truth at a glance, IP-restricted customers can allowlist one fixed address, and support runs through a single-sign-on portal. That's 32 tickets in six months on a part-time contract."
             },
             "links": {},
             "screenshots": []
@@ -98,11 +103,11 @@
             "role": "Software Engineer & Product Lead",
             "type": "Full-time",
             "startDate": "Dec 2025",
-            "endDate": "Present",
-            "current": true,
+            "endDate": "Aug 2026",
+            "current": false,
             "location": "Sydney, Australia",
             "description": "Production Flutter app with AI email ingestion, field-level encryption, and cloud infrastructure as code",
-            "synopsis": "The entire technical team for a production AI-first productivity platform, and the bridge between the founder's product vision and technical reality. Owns full-cycle engineering — AI pipelines, cloud infrastructure, App Store compliance, CI/CD — and every product decision that goes with it, converting unstructured emails, PDFs, and images into structured calendar events for consumers.",
+            "synopsis": "Was the entire technical team for a production AI-first productivity platform, and the bridge between the founder's product vision and technical reality. Owned full-cycle engineering (AI pipelines, cloud infrastructure, App Store compliance, CI/CD) and the product decisions that went with it, turning unstructured emails, PDFs and images into structured tasks and calendar events.",
             "tagline": "Production-Grade AI Platform",
             "genre": [
                 "AI/ML",
@@ -119,7 +124,7 @@
                 "Provisioned GCP infrastructure as code with Terraform (8 .tf files covering Pub/Sub, IAM, Secret Manager, API services) and authored three GitHub Actions CI/CD workflows for PR validation (format, lint, test) and dev/prod Android AAB builds",
                 "Navigated an App Store Guideline 3.1.1 rejection and shipped a platform-split paywall: iOS uses App Store offer code redemption via RevenueCat; Android retains the approved in-app voucher flow",
                 "Built multi-auth (Email/Password, Sign in with Apple, Google Sign-In) with platform-specific routing, anonymous-to-linked account flows, and branded transactional email via Gmail API",
-                "Built an offline AI-extraction eval harness (immutable run records, deterministic scorer, multi-provider abstraction) so model and prompt changes never ship blind, then used it to run a real A/B on reasoning-effort levels — an evidence-based product call that cut p50 latency ~72% for a 3.4-point accuracy trade-off",
+                "Built an offline AI-extraction eval harness (immutable run records, deterministic scorer, multi-provider abstraction) so model and prompt changes never ship blind, then benchmarked reasoning-effort levels in it, showing ~72% lower p50 latency for a 3.4-point accuracy trade-off: a product call made on data",
                 "Instrumented the AI pipeline end-to-end and read 14 days of production logs to pinpoint the OpenAI call as ~96% of total task time — turning \"the app feels slow\" into a precise, defensible engineering target"
             ],
             "techStack": [
@@ -161,7 +166,7 @@
                 "coffee": 5,
                 "documentation": 5,
                 "wouldBuildAgain": "Absolutely",
-                "duration": "Ongoing (7+ months)"
+                "duration": "9 months"
             },
             "metrics": [
                 {
@@ -281,14 +286,14 @@
             "slug": "usyd-academic",
             "company": "University of Sydney",
             "logo": "/images/logos/usyd.svg",
-            "role": "Casual Academic",
+            "role": "Casual Academic (Tutor)",
             "type": "Part-time",
             "startDate": "Feb 2024",
             "endDate": "Present",
             "current": true,
             "location": "Sydney, Australia",
-            "description": "Teaching machine learning and Python to engineering students",
-            "synopsis": "Tutoring and mentoring engineering students in machine learning, Python, and practical data science workflows.",
+            "description": "Teaching machine learning to engineering students, most of whom have never written code",
+            "synopsis": "Senior tutor for ENGG2112, the machine learning unit every engineering student at USYD takes, whatever their discipline. Rather than lecture from the front, I walk the room, sit with each table and learn every student's name. That's what makes people comfortable enough to ask the question they're stuck on.",
             "tagline": "Teaching the Next Generation",
             "genre": [
                 "Education",
@@ -296,11 +301,11 @@
                 "Mentorship"
             ],
             "highlights": [
-                "Tutored 450+ students in machine learning and Python workflows for practical engineering use cases",
-                "Mentored students in applying AI/ML to real-world engineering datasets",
-                "Achieved 95% positive feedback from students across multiple semesters",
-                "Created inclusive classroom culture with 'no wrong questions' philosophy",
-                "Provided detailed feedback after quizzes, ensuring thorough understanding"
+                "Taught machine learning to 530+ students across five semesters and nine classes, in classes of up to 160, earning 95% positive feedback on anonymous surveys I run voluntarily each semester",
+                "Guided 50+ multidisciplinary teams through complete ML projects, from problem framing and dataset selection to model comparison, with weekly progress reviews for every student",
+                "Tracked team health through weekly reflections and peer ratings, and stepped in early with targeted check-ins as the first point of escalation for teamwork issues",
+                "Ran mock presentations with rubric-aligned feedback to build students' clarity and confidence before finals",
+                "One of the only tutors to have studied the unit before teaching it, and kept the role by choice alongside full-time engineering work"
             ],
             "techStack": [
                 {
@@ -330,7 +335,7 @@
             "metrics": [
                 {
                     "label": "Students Taught",
-                    "value": "450+"
+                    "value": "530+"
                 },
                 {
                     "label": "Positive Feedback",
@@ -338,7 +343,11 @@
                 },
                 {
                     "label": "Semesters",
-                    "value": "3+"
+                    "value": "5"
+                },
+                {
+                    "label": "Classes",
+                    "value": "9"
                 }
             ],
             "caseStudy": {

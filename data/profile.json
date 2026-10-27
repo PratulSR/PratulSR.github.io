@@ -1,6 +1,6 @@
 {
     "name": "Pratul Singh Raghava",
-    "title": "Software Engineer & Product Lead",
+    "title": "Software Engineer",
     "tagline": "Loves ABCD - Anything Backend Cloud & Data",
     "location": "Sydney, Australia",
     "status": "Open to opportunities",
@@ -11,21 +11,21 @@
     },
     "photo": "/images/headshot.png",
     "bio": {
-        "short": "Software Engineer & Product Lead (First Class Honours, USYD) who builds production-grade systems end to end - and owns the product decisions that go with them, from AI pipelines and cloud infrastructure to App Store deployment and monetisation design.",
-        "full": "I am a Software Engineer & Product Lead (First Class Honours, USYD) who builds production-grade systems end to end. I lead engineering and product for Done Life, an AI-first productivity platform, owning the full lifecycle from cloud infrastructure and AI pipelines through to monetisation, App Store compliance, and CI/CD - and I'm the sole feature engineer shipping BackupMeraki, a Cisco Meraki backup/restore SaaS platform, at Nexivity.\n\nBeing the entire technical team at Done Life means every product call passes through me too: I've scrapped a year of no-code tooling for a working prototype built in a day, designed the subscription and entitlement system end to end, and built an offline AI-eval harness to A/B test model trade-offs on data instead of instinct - the kind of decision that sits right at the intersection of engineering and product.\n\nMy technical foundation spans field-level AES-256-GCM encryption, Terraform-provisioned GCP and AWS infrastructure, OpenAI Responses API with strict JSON schema and timezone-aware extraction, and GitHub Actions CI/CD pipelines. At Accenture I acted as a force multiplier, automating security provisioning workflows and cutting manual effort by 80%. Beyond code, I led the USYD Robotics Club from 230 to 1,800+ members as President, and I excel at translating ambiguous requirements into shipped software across compliance, data modelling, and product roadmaps."
+        "short": "Software engineer (First Class Honours, USYD) who builds products end to end, and the relationships around them. I engineer BackupMeraki at Nexivity, shipped a production app as its sole engineer, and have taught machine learning to 530+ engineering students.",
+        "full": "I'm a software engineer who builds things end to end, and I do my best work when the people I'm building for are in the room.\n\nRight now I'm the engineer on BackupMeraki at Nexivity: a SaaS on AWS that backs up, restores and compares Cisco Meraki network configurations, effectively version control and disaster recovery for cloud-managed networks. I work directly with the founder, taking each piece of work from a design doc to shipped code across eight repositories.\n\nBefore that I was the sole engineer at Done Life, an AI-first life-admin app. One month in, I made the call to scrap a year of no-code tooling and built a working prototype in a single day that outperformed it. From there I took the app from a scaffold to production on iOS and Android, with an AI email pipeline, per-user encryption, subscription billing, Terraform infrastructure and CI/CD.\n\nThe other half of my story is people. I've taught machine learning to 530+ engineering students at the University of Sydney, most of whom arrived having never written code, and I learn every student's name. As President of the USYD Robotics Club I grew it from 230 members to 1,800, the second-largest club on campus, with one motto: \"we have to be better, not bigger.\""
     },
     "coreThemes": [
         {
             "title": "Build-Run-Own-Decide",
-            "description": "I don't just write code; I architect the solution, manage the cloud operations, handle the compliance (GDPR to App Store verification), and make the product calls that decide what gets built next."
+            "description": "I don't just write code; I scope the problem, architect the solution, run it in production, and make the product calls that decide what gets built next."
         },
         {
-            "title": "AI & Scalability",
-            "description": "I build systems that handle complexity—from scaling database permissions at Accenture to running data-driven trade-off analysis (an offline eval harness, A/B'd reasoning-effort levels) before shipping AI changes."
+            "title": "Measure, Then Decide",
+            "description": "I'd rather measure than guess: an offline eval harness before shipping AI changes at Done Life, and a measured baseline before fixing Cisco rate limits at Nexivity. I direct AI coding agents with the same discipline: design first, review everything."
         },
         {
-            "title": "Clarity",
-            "description": "I excel at translating technical trade-offs for non-technical stakeholders (founders, clients, students, leadership)."
+            "title": "People First",
+            "description": "I've taught ML to 530+ engineers, most of whom had never coded, and grew USYD Robotics Club from 230 to 1,800 members. I translate technical trade-offs for founders, clients and students alike."
         }
     ],
     "trivia": [
@@ -60,12 +60,12 @@
             "category": "Achievement"
         },
         {
-            "fact": "Once accidentally brought down a database at Accenture, then turned it into a security win",
+            "fact": "Once accidentally took down auth on a dev database at Accenture, spotted the real risk it exposed, then led the fix",
             "icon": "💥",
             "category": "War Stories"
         },
         {
-            "fact": "Managed a crisis when 1,100 people signed up for a 60-person event",
+            "fact": "Managed a crisis when 1,100 people signed up for a 150-person event",
             "icon": "🎪",
             "category": "War Stories"
         }
@@ -87,6 +87,7 @@
         "github": "https://github.com/PratulSR"
     },
     "awards": [
+        "AWS Certified AI Practitioner",
         "Sydney International Student Award",
         "Engineering Sydney Industry Placement Scholarship",
         "First Class Honours (79.2 Honours WAM)"
